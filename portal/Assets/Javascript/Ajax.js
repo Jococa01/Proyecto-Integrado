@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", main);
 
 function main() {
-    let formulario = document.getElementById("formFilter");
+    let formulario = document.getElementById("loginform");
     formulario.addEventListener("submit", function (e) {
         e.preventDefault();
         loadData(this);
