@@ -4,7 +4,7 @@ class connection{
     protected $conn;
     public function __construct()
     {
-        $fichero = file_get_contents(__DIR__."../../json/db.json");
+        $fichero = file_get_contents("../json/db.json");
         $datosDB = json_decode($fichero,true);
 
         $servername = $datosDB["servername"];

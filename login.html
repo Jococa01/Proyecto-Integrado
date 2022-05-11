@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./portal/Assets/css/sample.css">
     <link rel="shortcut icon" href="./portal/Assets/imgs/favicon.ico">
+    <script src="./portal/Assets/Javascript/Ajax.js"></script>
     <title>Log-In</title>
 </head>
 
@@ -17,36 +18,38 @@
                 <div class="column is-4 is-offset-4">
                     <h3 class="title has-text-black">Login</h3>
                     <hr class="login-hr" style="background-color: black;">
-                    <p class="subtitle has-text-black">Please login to proceed.</p>
+                    <p class="subtitle has-text-black">Inicie sesión para acceder al Sitio Web.</p>
                     <div class="box">
                         <figure class="avatar">
                             <img src="./portal/Assets/imgs/avatar.png" width="128px">
                         </figure>
-                        <form>
+                        <form method="post">
                             <div class="field">
                                 <div class="control">
-                                    <input class="input is-large" type="email" placeholder="Your Email" autofocus="">
+                                    <input class="input is-large" type="email" placeholder="Su correo" autofocus="">
                                 </div>
                             </div>
 
                             <div class="field">
                                 <div class="control">
-                                    <input class="input is-large" type="password" placeholder="Your Password">
+                                    <input class="input is-large" type="password" placeholder="Su contraseña">
                                 </div>
                             </div>
-                            <div class="field">
+                            <!-- <div class="field">
                                 <label class="checkbox">
-                  <input type="checkbox">
-                  Remember me
-                </label>
-                            </div>
-                            <button class="button is-block is-info is-large is-fullwidth">Login <i class="fa fa-sign-in" aria-hidden="true"></i></button>
+                                    <input type="checkbox">
+                                    Remember me
+                                </label>
+                            </div> -->
+                            <!-- <button class="button is-block is-info is-large is-fullwidth">Login <i class="fa fa-sign-in"
+                                    aria-hidden="true"></i></button> -->
+                            <input type="submit" value="Login" class="button is-block is-info is-large is-fullwidth">
                         </form>
                     </div>
                     <p class="has-text-grey">
-                        <a href="../">Sign Up</a> &nbsp;·&nbsp;
-                        <a href="../">Forgot Password</a> &nbsp;·&nbsp;
-                        <a href="../">Need Help?</a>
+                        <a href="../">Registrarse</a> &nbsp;·&nbsp;
+                        <a href="../">¿Ha olvidad la contraseña?</a> &nbsp;·&nbsp;
+                        <a href="../">Ayuda</a>
                     </p>
                 </div>
             </div>
