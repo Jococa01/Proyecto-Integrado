@@ -17,6 +17,6 @@ function loadData(form) {
             console.log(data);
         }
     });
-    xhttp.open("POST", "list.php", true);
+    xhttp.open("POST", "login.php", true);
     xhttp.send(formFilter);
 }
