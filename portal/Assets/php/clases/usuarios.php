@@ -29,4 +29,18 @@ class usuarios extends connection{
 
     }
 
+    public function searchUser($email){
+
+        try{
+            $stmtMail = $this->conn->prepare("SELECT * FROM usuario WHERE email = :email");
+            $stmtMail->bindParam(':email', $email, PDO::PARAM_STR);
+            if ($stmtMail->execute() && $stmtMail->rowCount() > 0) {
+                return $stmtMail->fetch(PDO::FETCH_ASSOC);
+            }
+        } catch (Exception | PDOException $e){
+            echo 'Falló la búsqueda'.$e->getMessage();
+        }
+
+    }
+
 }
