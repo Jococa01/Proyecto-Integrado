@@ -26,13 +26,13 @@
                         <form method="post" id="loginform">
                             <div class="field">
                                 <div class="control">
-                                    <input class="input is-large" type="email" placeholder="Su correo" autofocus="">
+                                    <input class="input is-large" type="email" placeholder="Su correo" autofocus="" name="email" required>
                                 </div>
                             </div>
-
+                            <div id="Errormsg" style="height: 2em; width: 50%; margin-bottom: 1em; margin-top: 1em; float: left; vertical-align: middle; background-color: crimson; color: white; border-radius: 5px;" hidden>No existe el usuario</div>
                             <div class="field">
                                 <div class="control">
-                                    <input class="input is-large" type="password" placeholder="Su contraseña">
+                                    <input class="input is-large" type="password" placeholder="Su contraseña" name="contrasenya" required>
                                 </div>
                             </div>
                             <!-- <div class="field">
@@ -48,7 +48,7 @@
                     </div>
                     <p class="has-text-grey">
                         <a href="../">Registrarse</a> &nbsp;·&nbsp;
-                        <a href="../">¿Ha olvidad la contraseña?</a> &nbsp;·&nbsp;
+                        <a href="../">¿Ha olvidado la contraseña?</a> &nbsp;·&nbsp;
                         <a href="../">Ayuda</a>
                     </p>
                 </div>
