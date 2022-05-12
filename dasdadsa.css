@@ -1,0 +1,70 @@
+body {
+    width: 50%;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10em;
+    background-color: aliceblue;
+    height: fit-content;
+    padding: 2em;
+    color: black;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-left: 10%;
+    margin-right: 5%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    width: 600px;
+    overflow: hidden;
+}
+
+#uno {
+    padding-right: 100px;
+    padding-left: 20px;
+}
+
+#dos {
+    padding-right: 20%;
+}
+
+#boto{
+    background-color: #00c8ff8d;
+    border: none;
+    color: white;
+    font-weight: bold;
+}
+
+.color{
+    color: rgb(172, 218, 227);
+
+}
+
+img {
+    max-width: 100px;
+    height: 80px;
+    width: 80px;
+    margin:10px auto;
+	display:block;
+}
+
+.cuadrado {
+    overflow: visible;
+    width: 100%;
+}
+
+div {
+    float: right;
+    margin: 5%;
+    background-color: #fdfdfd;
+}
+
+input {
+    width: 200px;
+    height: 30px
+}
+
+ul li {
+    padding: 10px;
+}
