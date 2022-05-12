@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", main);
 
 function main() {
+    console.log('domloaded');
     let formulario = document.getElementById("loginform");
     let password = document.getElementById("password");
 
