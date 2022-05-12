@@ -16,7 +16,7 @@ class usuarios extends connection{
 
             $id = $data["id"];
             $email = $data["email"];
-            $contrasenya = $data["contrasenya"];
+            $contrasenya = md5($data["contrasenya"]);
             $nombre = $data["nombre"];
             $tipo = $data["tipo"];
 

@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", main);
 
 function main() {
-    console.log('domloaded');
+    console.log('DOMloaded');
     let formulario = document.getElementById("loginform");
     let password = document.getElementById("password");
 
@@ -39,9 +39,9 @@ function loadData(form) {
 function CheckPassword(pass){
     let password = document.getElementById("password");
     if(pass==password.value){
-        console.log("Pass correcta");
+        console.log("Pass correcta, se introdujo: "+password.value+" y la contraseña era: "+pass);
     }else{
-        console.log("Pass incorrecta");
+        console.log("Pass incorrecta, se introdujo: "+password.value+" y la contraseña era: "+pass);
     }
 }
 
