@@ -23,6 +23,21 @@ if ($result == null) {
     //Si no existe devuelvo null al JavaScript, porque es más facil de trabajar que con un espacio
     echo json_encode(null);
 } else {
+
+    echo json_encode($result);
+
     //Si existe la dirección de correo lo indico por consola
-    echo json_encode("Existe el usuario con mail: " . $result['email']);    
+    // echo json_encode("Existe el usuario con mail: " . $result['email']);
+    
+    //Una vez se confirma la existencia del correo en la base de datos, compruebo si la contraseña es correcta
+    // $cont = $_POST['contrasenya'];
+    // if($result['contrasenya'] != $_POST['contrasenya']){
+        
+    //     echo json_encode("Existe el usuario con mail: " . $result['email']." pero la contraseña: ".$_POST['contrasenya']." es incorrecta");
+
+    // }else{
+
+    //     echo json_encode("Existe el usuario con mail: " . $result['email']." y contraseña: ".$_POST['contrasenya']);
+
+    // }
 }
