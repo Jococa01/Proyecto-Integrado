@@ -2,28 +2,17 @@
 
 class usuario{
 
-protected $ID;
 protected $Email;
 protected $Contrasenya;
 protected $Nombre;
 protected $Tipo;
 
-public function __construct($ID,$Email,$Contrasenya,$Nombre,$Tipo)
+public function __construct($Email,$Contrasenya,$Nombre,$Tipo)
 {
-    $this->ID = $ID;
     $this->Email = $Email;
     $this->Contrasenya = $Contrasenya;
     $this->Nombre = $Nombre;
     $this->Tipo = $Tipo;
-}
-
-
-/**
- * Get the value of ID
- */ 
-public function getID()
-{
-return $this->ID;
 }
 
 /**

@@ -7,14 +7,12 @@ class usuarios extends connection{
     public function newUser($data){
         
         try {
-            $stmtInsert = $this->conn->prepare("INSERT INTO usuario VALUES(?,?,?,?,?)");
-            $stmtInsert->bindParam(1, $id, PDO::PARAM_INT);
-            $stmtInsert->bindParam(2, $email, PDO::PARAM_STR);
-            $stmtInsert->bindParam(3, $contrasenya, PDO::PARAM_STR);
-            $stmtInsert->bindParam(4, $nombre, PDO::PARAM_STR);
-            $stmtInsert->bindParam(5, $tipo, PDO::PARAM_STR);
+            $stmtInsert = $this->conn->prepare("INSERT INTO usuario VALUES(?,?,?,?)");
+            $stmtInsert->bindParam(1, $email, PDO::PARAM_STR);
+            $stmtInsert->bindParam(2, $contrasenya, PDO::PARAM_STR);
+            $stmtInsert->bindParam(3, $nombre, PDO::PARAM_STR);
+            $stmtInsert->bindParam(4, $tipo, PDO::PARAM_STR);
 
-            $id = $data["id"];
             $email = $data["email"];
             $contrasenya = md5($data["contrasenya"]);
             $nombre = $data["nombre"];

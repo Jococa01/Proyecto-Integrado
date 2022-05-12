@@ -5,7 +5,6 @@ require_once('autoload.php');
 //Inserción de prueba para la base de datos
 
 // $SampleMail = [
-//     "id" => 1,
 //     "email" => "joancoronado12@gmail.com",
 //     "contrasenya" => "8pro121,C",
 //     "nombre" => "Joan",
@@ -14,6 +13,8 @@ require_once('autoload.php');
 
 //Creo un objeto de la clase de usuarios
 $Users =  new usuarios();
+
+// $Users->newUser($SampleMail);
 
 //Cojo lo que ha enviado el formulario de login, en este caso es la direccion de correo
 $result = $Users->searchUser($_POST["email"]);

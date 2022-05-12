@@ -4,6 +4,16 @@ function main() {
     console.log('DOMloaded');
     let formulario = document.getElementById("loginform");
     let password = document.getElementById("password");
+    let namefield = document.getElementById("name");
+
+    namefield.addEventListener('focusout',function(){
+        if(namefield.value!=""){
+            namefield.style.backgroundColor ='#ff9136';
+        }
+        else{
+            namefield.style.backgroundColor ='#fff';
+        }
+    })
 
     password.addEventListener('focusout',function(){
         if(password.value == ""){
@@ -38,10 +48,10 @@ function loadData(form) {
 
 function CheckPassword(pass){
     let password = document.getElementById("password");
-    if(pass==password.value){
-        console.log("Pass correcta, se introdujo: "+password.value+" y la contraseña era: "+pass);
+    if(pass==md5(password.value)){
+        console.log("Pass correcta, se introdujo: "+md5(password.value)+" y la contraseña era: "+pass);
     }else{
-        console.log("Pass incorrecta, se introdujo: "+password.value+" y la contraseña era: "+pass);
+        console.log("Pass incorrecta, se introdujo: "+md5(password.value)+" y la contraseña era: "+pass);
     }
 }
 
