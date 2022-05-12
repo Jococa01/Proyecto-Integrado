@@ -1,66 +1,50 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html lang="es-ES">
-
-<head>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./portal/Assets/css/sample.css">
+    <link rel="stylesheet" href="./portal/Assets/css/signup.css">
     <link rel="shortcut icon" href="./portal/Assets/imgs/favicon.ico">
-    <link rel="stylesheet" href=".">
-    <link rel="stylesheet" href="./portal/Assets/css/sign up.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <script src="./portal/Assets/Javascript/Ajax.js"></script> -->
-    <title>Sign Up</title>
-    <!-- <script>
-    function comprobarClave(){
-        clave1 = document.f1.clave1.value
-        clave2 = document.f1.clave2.value
-    
-        if (clave1 == clave2)
-           alert("Las dos claves son iguales...")
-        else
-           alert("Las dos claves son distintas...\n Vuelve a poner todo pringao :)")
-    }
-
-    onClick="comprobarClave()"
-
-    </script> -->
+    <title>Log-In</title>
 </head>
 
 <body>
-    <main>
-        <div class="grid-container">
-            <div id="uno">
-                <img src="./portal/Assets/imgs/Logo-black.png">
-                <h3>
-                    &nbsp&nbsp&nbsp Al registrarse podrá:
-                </h3>
-                <ul>
-                    <li><font color="00C9FF">Guardar</font> sus paginas para continuar leyendolas en otro momento.</li>
+    <div class="grid-container">
+      <div class="gride">
+        <div id="uno">
+          <img src="./portal/Assets/imgs/Logo-black.png">
+          <h3>
+            &nbsp&nbsp&nbsp Al registrarse podrá:
+          </h3>
+          <ul>
+            <li>
+              <font color="00C9FF">Guardar</font> sus paginas para continuar leyendolas en otro momento.
+            </li>
 
-                    <li>Interactuar con otras personas en el <font color="00C9FF">foro</font>.</li>
-                    <li>Obtener <font color="00C9FF">insignias</font> especiales en el foro.</li>
-                </ul>
-            </div>
-            <div id="dos">
-                <div>
-                    <h1>Registro</h1>
-                    <form action="" class="cuadrado">
-                        <div><input class="input" type="text" placeholder="Nombre*" autofocus="" name="nombre" required>
-                        </div><br>
-                        <div><input class="input" type="email" placeholder="E-mail*" autofocus="" name="email" required>
-                        </div><br>
-                        <div><input class="input" type="password" placeholder="Contraseña*" autofocus="" required></div>
-                        <br>
-                        <div><input class="input" type="password" placeholder="Repetir contraseña*" autofocus=""
-                                required></div><br>
-                        <input id="boto" type="submit" value="Login" class="button is-info ">
-                    </form>
-                </div>
-            </div>
+            <li>Interactuar con otras personas en el <font color="00C9FF">foro</font>.</li>
+            <li>Obtener <font color="00C9FF">insignias</font> especiales en el foro.</li>
+          </ul>
         </div>
-    </main>
+        <div id="dos">
+          <div>
+            <h1>Registro</h1>
+            <form action="" class="cuadrado">
+              <div><input class="input" type="text" placeholder="Nombre*" autofocus="" name="nombre" required>
+              </div><br>
+              <div><input class="input" type="email" placeholder="E-mail*" autofocus="" name="email" required>
+              </div><br>
+              <div><input class="input" type="password" placeholder="Contraseña*" autofocus="" required></div>
+              <br>
+              <div><input class="input" type="password" placeholder="Repetir contraseña*" autofocus="" required></div>
+              <br>
+              <input id="boto" type="submit" value="Login" class="button is-info ">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
 </body>
 
 </html>
