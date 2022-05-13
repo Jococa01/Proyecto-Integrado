@@ -1,15 +1,3 @@
-### Rewrite Rules Added by CyberPanel Rewrite Rule Generator
-
 RewriteEngine On
-RewriteCond %{HTTPS}  !=on
-RewriteRule ^/?(.*) https://%{SERVER_NAME}/$1 [R,L]
-
-### End CyberPanel Generated Rules.
-
-RewriteEngine On
-RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^([^\.]+)$ $1.html [NC, L]
-
-
-cat: /home/projectathena.ddns.net/public_html/.htaccess: No such file or directory
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
