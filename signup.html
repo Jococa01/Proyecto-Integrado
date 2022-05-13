@@ -1,50 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./portal/Assets/css/sample.css">
-    <link rel="stylesheet" href="./portal/Assets/css/signup.css">
-    <link rel="shortcut icon" href="./portal/Assets/imgs/favicon.ico">
-    <title>Log-In</title>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./portal/Assets/css/sample.css">
+  <link rel="stylesheet" href="./portal/Assets/css/signup.css">
+  <link rel="shortcut icon" href="./portal/Assets/imgs/favicon.ico">
+  <title>Log-In</title>
 </head>
 
 <body>
-    <div class="grid-container">
-      <div class="gride">
-        <div id="uno">
-          <img src="./portal/Assets/imgs/Logo-black.png">
-          <h3>
-            &nbsp&nbsp&nbsp Al registrarse podrá:
-          </h3>
-          <ul>
-            <li>
-              <font color="00C9FF">Guardar</font> sus paginas para continuar leyendolas en otro momento.
-            </li>
+  <div class="grid-container">
+    <div class="gride">
+      <div id="uno">
+        <img src="./portal/Assets/imgs/Logo-black.png">
+        <h3>
+          &nbsp&nbsp&nbsp Al registrarse podrá:
+        </h3>
+        <ul>
+          <li>
+            <font color="00C9FF">Guardar</font> sus paginas para continuar leyendolas en otro momento.
+          </li>
 
-            <li>Interactuar con otras personas en el <font color="00C9FF">foro</font>.</li>
-            <li>Obtener <font color="00C9FF">insignias</font> especiales en el foro.</li>
-          </ul>
-        </div>
-        <div id="dos">
-          <div>
-            <h1>Registro</h1>
-            <form action="" class="cuadrado">
-              <div><input class="input" type="text" placeholder="Nombre*" autofocus="" name="nombre" required>
-              </div><br>
-              <div><input class="input" type="email" placeholder="E-mail*" autofocus="" name="email" required>
-              </div><br>
-              <div><input class="input" type="password" placeholder="Contraseña*" autofocus="" required></div>
-              <br>
-              <div><input class="input" type="password" placeholder="Repetir contraseña*" autofocus="" required></div>
-              <br>
-              <input id="boto" type="submit" value="Login" class="button is-info ">
-            </form>
-          </div>
-        </div>
+          <li>Interactuar con otras personas en el <font color="00C9FF">foro</font>.</li>
+          <li>Obtener <font color="00C9FF">insignias</font> especiales en el foro.</li>
+        </ul>
+      </div>
+      <div id="dos">
+        <form action="" method="post" id="signupid">
+          <h1>Registro</h1>
+          <br>
+          <label>Nombre</label>
+          <input class="input" type="text" placeholder="Nombre*" autofocus="" name="nombre" required>
+          <label>Email</label>
+          <input class="input" type="email" placeholder="E-mail*" autofocus="" name="email" required>
+          <label>Contraseña</label>
+          <input class="input" type="password" placeholder="Contraseña*" autofocus="" required>
+          <label>Repite la contraseña</label>
+          <input class="input" type="password" placeholder="Repetir contraseña*" autofocus="" required>
+          <input id="boto" type="submit" value="Login" class="button is-info ">
+        </form>
       </div>
     </div>
+  </div>
 </body>
 
 </html>
