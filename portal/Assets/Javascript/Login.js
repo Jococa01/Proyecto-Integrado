@@ -34,30 +34,32 @@ function main() {
     // loadData(formulario);
 }
 function loadData(form) {
-    let formFilter = new FormData(form);
-    const xhttp = new XMLHttpRequest();
-    xhttp.addEventListener("readystatechange", function () {
-        if (this.readyState == 4 && this.status == 200) {
-            let data = JSON.parse(this.responseText);
-            Checkaccount(data);
-        }
-    });
-    xhttp.open("POST", "/portal/Assets/php/login.php", true);
-    xhttp.send(formFilter);
+        let formFilter = new FormData(form);
+        const xhttp = new XMLHttpRequest();
+        xhttp.addEventListener("readystatechange", function () {
+            if (this.readyState == 4 && this.status == 200) {
+                let data = JSON.parse(this.responseText);
+                console.log(data);
+                Checkaccount(data);
+            }
+        });
+        xhttp.open("POST", "/portal/Assets/php/login.php", true);
+        xhttp.send(formFilter);
 }
 
-function CheckPassword(pass){
+function CheckPassword(data){
     let password = document.getElementById("password");
-    if(pass==md5(password.value)){
-        console.log("Pass correcta, se introdujo: "+md5(password.value)+" y la contraseña era: "+pass);
+    if(data['contrasenya']==md5(password.value)){
+        console.log("Pass correcta, se introdujo: "+md5(password.value)+" y la contraseña era: "+data['contrasenya']);
+        window.location.href="./index.html";
     }else{
-        console.log("Pass incorrecta, se introdujo: "+md5(password.value)+" y la contraseña era: "+pass);
+        console.log("Pass incorrecta, se introdujo: "+md5(password.value)+" y la contraseña era: "+data['contrasenya']);
     }
 }
 
 function Checkaccount(data){
     if(data != null){
-        CheckPassword(data['contrasenya']);
+        CheckPassword(data);
     }
     else{
         console.log("El correo no está registrado");

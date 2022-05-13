@@ -13,6 +13,7 @@ require_once('autoload.php');
 
 //Creo un objeto de la clase de usuarios
 $Users =  new usuarios();
+$Sesion = new sesionUsuario();
 
 // $Users->newUser($SampleMail);
 
@@ -25,5 +26,9 @@ if ($result == null) {
     echo json_encode(null);
 } else {
     //Si existe la dirección de correo envio los datos del usuario a javascript
+    $match = $Users->verifyPassword($result['email'],$result['contrasenya']);
+    if($match != null){
+        // $Sesion->SetCurrentUser($result['nombre']);
+    }
     echo json_encode($result);
 }

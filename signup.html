@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="./portal/Assets/css/sample.css">
   <link rel="stylesheet" href="./portal/Assets/css/signup.css">
   <link rel="shortcut icon" href="./portal/Assets/imgs/favicon.ico">
+  <script src="./portal/Assets/Javascript/SignUp.js"></script>
   <title>Log-In</title>
 </head>
 
@@ -33,13 +34,13 @@
           <h1>Registro</h1>
           <br>
           <label>Nombre</label>
-          <input class="input" type="text" placeholder="Nombre*" autofocus="" name="nombre" required>
+          <input id="name" class="input" type="text" placeholder="Nombre*" autofocus="" name="nombre" required>
           <label>Email</label>
-          <input class="input" type="email" placeholder="E-mail*" autofocus="" name="email" required>
+          <input id="mail" class="input" type="email" placeholder="E-mail*" autofocus="" name="email" required>
           <label>Contraseña</label>
-          <input class="input" type="password" placeholder="Contraseña*" autofocus="" required>
+          <input id="pass" class="input" type="password" placeholder="Contraseña*" autofocus="" name="contrasenya" required>
           <label>Repite la contraseña</label>
-          <input class="input" type="password" placeholder="Repetir contraseña*" autofocus="" required>
+          <input id="confpass" class="input" type="password" placeholder="Repetir contraseña*" autofocus="" name="confirmpass" required>
           <input id="boto" type="submit" value="Login" class="button is-info ">
         </form>
       </div>
