@@ -1,8 +1,14 @@
 ### Rewrite Rules Added by CyberPanel Rewrite Rule Generator
 
+# RewriteEngine On
+# RewriteCond %{HTTPS}  !=on
+# RewriteRule ^/?(.*) https://%{SERVER_NAME}/$1 [R,L]
+
+
 RewriteEngine On
-RewriteCond %{HTTPS}  !=on
-RewriteRule ^/?(.*) https://%{SERVER_NAME}/$1 [R,L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.html [NC, L]
 
 ### End CyberPanel Generated Rules.
 
