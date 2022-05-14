@@ -6,4 +6,6 @@ $Users =  new usuarios();
 $Sesion = new sesionUsuario();
 
 // $result = $Users->searchUser($_POST["email"]);
-echo json_encode($_POST);
+// $jambo = $Users->verifyPassword($_POST['email'],$_POST['passwd']);
+$Sesion->SetCurrentUser($_POST['user']);
+echo json_encode("Sesión iniciada correctamente");
