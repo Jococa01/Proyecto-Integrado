@@ -11,3 +11,11 @@ h1{
     font-family: 'Times New Roman', Times, serif;
     text-align: center;
 }
+
+h2{
+    color: black;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
