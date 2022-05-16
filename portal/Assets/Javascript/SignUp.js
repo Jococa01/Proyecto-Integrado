@@ -20,12 +20,12 @@ function loadData(form) {
         if (this.readyState == 4 && this.status == 200) {
             let data = JSON.parse(this.responseText);
             if (data == null) {
-                // console.log("Se ha creado el usuario");
+                console.log("Se ha creado el usuario");
                 document.getElementById("mail").style.borderColor = "";
                 window.location.href='./index.html';
             }
             else {
-                // console.log("Ya hay un usuario con esa cuenta de correo");
+                console.log("Ya hay un usuario con esa cuenta de correo");
                 document.getElementById("mail").style.borderColor = "red";
 
                 let p = document.createElement("p");

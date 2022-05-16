@@ -18,11 +18,10 @@
       <a class="navbar-item" href="">
         <img src="./portal/Assets/imgs/Logo-white.png" width="" height="50">
       </a>
-
-      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
+      <a class="navbar-burger" id="burger">
+        <span></span>
+        <span></span>
+        <span></span>
       </a>
     </div>
 
@@ -94,9 +93,10 @@
               <!-- Email address input-->
               <div class="row">
                 <div class="col">
-                  <input class="form-control form-control-lg" id="emailAddress" type="email" placeholder="Busca aqui tu mitologia"
-                    data-sb-validations="required,email" />
-                  <div class="invalid-feedback text-white" data-sb-feedback="emailAddress:required">No se a encontrado tu busqueda.</div>
+                  <input class="form-control form-control-lg" id="emailAddress" type="email"
+                    placeholder="Busca aqui tu mitologia" data-sb-validations="required,email" />
+                  <div class="invalid-feedback text-white" data-sb-feedback="emailAddress:required">No se a encontrado
+                    tu busqueda.</div>
                 </div>
                 <div class="col-auto"><button class="btn btn-primary btn-lg disabled" id="submitButton"
                     type="submit">Buscar</button></div>

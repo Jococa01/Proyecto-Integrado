@@ -11,6 +11,7 @@ function main() {
 
                 document.getElementById('close').addEventListener('click',CloseSession);
             }
+            document.getElementById('burger').addEventListener('click',toggleBurger);
         }
         });
     xhttp.open("POST", "/portal/Assets/php/index.php", true);
@@ -30,3 +31,10 @@ function CloseSession(){
     xhttp.send();
 
 }
+
+const toggleBurger = () => {
+    let burgerIcon = document.getElementById('burger');
+    let dropMenu = document.getElementById('navbarBasicExample');
+    burgerIcon.classList.toggle('is-active');
+    dropMenu.classList.toggle('is-active');
+  };
