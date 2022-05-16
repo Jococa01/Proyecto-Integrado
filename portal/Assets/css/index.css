@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
 /*!
 * Start Bootstrap - Landing Page v6.0.5 (https://startbootstrap.com/theme/landing-page)
 * Copyright 2013-2022 Start Bootstrap
@@ -11302,7 +11303,7 @@ textarea.form-control-lg {
 
 header.masthead {
   position: relative;
-  background-color: aliceblue;
+  background-color: #00C9FF;
   background: url("../assets/img/bg-masthead.jpg") no-repeat center center;
   background-size: cover;
   padding-top: 8rem;
@@ -11311,7 +11312,7 @@ header.masthead {
 header.masthead:before {
   content: "";
   position: absolute;
-  background-color: aliceblue;
+  background-color: #00C9FF;
   height: 100%;
   width: 100%;
   top: 0;
