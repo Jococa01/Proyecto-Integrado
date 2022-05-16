@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./sample.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="https://bulma.io">
+                <img src="./portal/Assets/imgs/Logo-white.png" width="" height="50">
+            </a>
+
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+                data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item">
+                    Home
+                </a>
+
+                <a class="navbar-item">
+                    Documentation
+                </a>
+
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">
+                        More
+                    </a>
+
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item">
+                            About
+                        </a>
+                        <a class="navbar-item">
+                            Jobs
+                        </a>
+                        <a class="navbar-item">
+                            Contact
+                        </a>
+                        <hr class="navbar-divider">
+                        <a class="navbar-item">
+                            Report an issue
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a class="button is-primary" href="./sign up.html">
+                            <strong>Sign up</strong>
+                        </a>
+                        <a class="button is-light" href="./login.html">
+                            Log in
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ----------------------------------------------------------------------------------------------------------------------------------------------- -->
+    <h1>
+        MAPA <font color="00C9FF">MITOGÍAS</font>.
+    </h1>
+
+    <h2>
+        En este <font color="00C9FF">mapa</font> podras elegir tu camino para <font color="00C9FF">descubrir</font> las mitologías.
+    </h2>
+
+    <center>
+        <img usemap="#mapadeimagen" src="mapa-mejorado.png" width="1000px" height="auto" />
+    </center>
+    <!-- https://yangcha.github.io/iview/iview.html   pagina para ver coords-->
+    <map name="mapadeimagen">
+        <area shape="poly" coords="497,247,527,251,552,271,555,290,515,282,495,255"
+            href=""
+            alt="zona griega">
+
+        <area shape="poly"
+            coords="479,234,509,225,540,223,544,205,552,198,572,193,576,165,541,148,530,158,484,173,480,182,469,189,467,212"
+            href="" alt="zona nordica" target="_blank">
+
+        <area shape="poly"
+            coords="520,308,475,309,435,300,418,279,419,257,438,250,440,240,455,230,480,239,520,284,522,308"
+            href="" alt="zona romana" target="_blank">
+
+        <area shape="poly"
+            coords="530,300,546,303,557,298,560,288,577,284,573,314,565,322,580,349,590,356,596,378,566,366,558,353,542,348,532,330,533,300"
+            href="" alt="zona egipcia" target="_blank">
+
+        <area shape="poly" coords="191,362,204,372,203,378,213,400,220,410,215,430,180,410,175,400,170,390,175,370"
+            href="" alt="zona maya" target="_blank">
+    </map>
+
+</body>
+
+</html>
