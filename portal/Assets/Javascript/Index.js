@@ -5,7 +5,7 @@ function main() {
     xhttp.addEventListener("readystatechange", function () {
         if (this.readyState == 4 && this.status == 200) {
             let data = JSON.parse(this.responseText);
-            // console.log(data);
+            console.log(data);
             if(data !=null){
                 document.getElementById('endbuttons').innerHTML='<div class="navbar-item has-dropdown is-hoverable"><a class="navbar-link">'+data['user']+'</a><div class="navbar-dropdown"><a class="navbar-item" id="close">Cerrar Sesión</a></div></div>';
 
