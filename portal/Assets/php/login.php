@@ -12,7 +12,7 @@ require_once('autoload.php');
 
 // //Creo un objeto de la clase de usuarios
 $Users =  new usuarios();
-$Sesion = new sesionusuario();
+$Sesion = new sesionUsuario();
 
 // echo json_encode("hola");
 
