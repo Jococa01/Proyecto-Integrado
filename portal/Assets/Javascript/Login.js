@@ -35,12 +35,11 @@ function main() {
 function loadData(form) {
         let formFilter = new FormData(form);
         const xhttp = new XMLHttpRequest();
-        console.log("holis");
         xhttp.addEventListener("readystatechange", function () {
             if (this.readyState == 4 && this.status == 200) {
                 let data = JSON.parse(this.responseText);
-                console.log(data);
-                // Checkaccount(data);
+                // console.log(data);
+                Checkaccount(data);
             }
         });
         xhttp.open("POST", "/portal/Assets/php/login.php", true);
