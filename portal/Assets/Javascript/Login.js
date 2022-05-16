@@ -35,6 +35,7 @@ function main() {
 function loadData(form) {
         let formFilter = new FormData(form);
         const xhttp = new XMLHttpRequest();
+        console.log("holis");
         xhttp.addEventListener("readystatechange", function () {
             if (this.readyState == 4 && this.status == 200) {
                 let data = JSON.parse(this.responseText);
