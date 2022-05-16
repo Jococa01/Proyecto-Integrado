@@ -1,7 +1,7 @@
 @import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
 
-area:hover{
-    color:chartreuse
+body{
+    background-color: rgb(225, 215, 215)
 }
 
 h1{
