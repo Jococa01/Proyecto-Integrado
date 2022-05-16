@@ -22,7 +22,7 @@ function loadData(form) {
             if (data == null) {
                 // console.log("Se ha creado el usuario");
                 document.getElementById("mail").style.borderColor = "";
-                window.location.href="./index.html";
+                window.location.href='./index.html';
             }
             else {
                 // console.log("Ya hay un usuario con esa cuenta de correo");

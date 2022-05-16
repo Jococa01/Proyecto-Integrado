@@ -5,7 +5,7 @@ $Users =  new usuarios();
 
 $parsedata = [
     "email"=>$_POST['email'],
-    "contrasenya"=>md5($_POST['contrasenya']),
+    "contrasenya"=>$_POST['contrasenya'],
     "nombre"=>$_POST['nombre'],
     "tipo"=>"usuario"
 ];
