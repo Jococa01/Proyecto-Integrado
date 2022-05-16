@@ -79,3 +79,4 @@ function StartSession(passeddata){
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhttp.send("user="+user);
 }
+

@@ -56,4 +56,23 @@ class usuarios extends connection{
 
     }
 
+
+    
+    public function sistemadminList()
+    {
+
+        //hacer
+        $employees = $this->($email);
+        $output = "";
+        foreach ($employees as $employee) {
+            $output .= " <tr>";
+            $output .= " <td>" . $employee->getEmployeeNumber() . "</td>";
+            $output .= " <td>". "EXT: " . $employee->getExtension() . "/Email: " . $employee->getEmail() . "/Office: " . $employee->getOfficeCode() . "</td>";
+            $output .= " <td>"."<a href='update.php?employeeNumber=" . $employee->getEmployeeNumber() ."'". $employee->getEmployeeNumber() . "'><img src='img/edit_icon.png' width='25'></a></td>'";
+            $output .= "</tr>";
+        }
+        return $output;
+        
+    }
+
 }
