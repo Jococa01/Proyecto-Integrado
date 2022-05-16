@@ -13,84 +13,80 @@
 </head>
 
 <body>
-  <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-      <a class="navbar-item" href="">
-        <img src="./portal/Assets/imgs/Logo-white.png" width="" height="50">
-      </a>
-      <a class="navbar-burger" id="burger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </a>
-    </div>
-
-    <div id="navbarBasicExample" class="navbar-menu">
-      <div class="navbar-start">
-        <a class="navbar-item">
-          Home
-        </a>
-
-        <a class="navbar-item">
-          Documentation
-        </a>
-
-        <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link">
-            More
-          </a>
-
-          <div class="navbar-dropdown">
-            <a class="navbar-item">
-              About
+ 
+  <nav class="navbar is-dark is-fixed-top">
+    <div class="container">
+        <div class="navbar-brand">
+            <a href="#" class="navbar-item">
+                <img src="./portal/Assets/imgs/Logo-white.png" width="32" height="32">
             </a>
-            <a class="navbar-item">
-              Jobs
+
+            <a class="navbar-burger" data-target="navMenu" id="burger">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
             </a>
-            <a class="navbar-item">
-              Contact
-            </a>
-            <hr class="navbar-divider">
-            <a class="navbar-item">
-              Report an issue
-            </a>
-          </div>
         </div>
-      </div>
 
-      <div class="navbar-end">
-        <div class="navbar-item">
-          <div class="buttons" id="endbuttons">
-            <a class="button is-primary" href="./signup.html">
-              <strong>Sign up</strong>
-            </a>
-            <a class="button is-light" href="./login.html">
-              Log in
-            </a>
-          </div>
+        <div class="navbar-menu" id="navMenu">
+            <div class="navbar-start">
+                <a href="#" class="navbar-item">
+                    Home
+                </a>
+                <a href="#" class="navbar-item">
+                    Blog
+                </a>
+                <a href="#" class="navbar-item">
+                    About
+                </a>
+                <a href="#" class="navbar-item">
+                    Contact
+                </a>
+
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a href="#" class="navbar-link">
+                        More
+                    </a>
+
+                    <div class="navbar-dropdown is-left">
+                        <a href="#" class="navbar-item">
+                            Profile
+                        </a>
+                        <a href="#" class="navbar-item">
+                            Settings
+                        </a>
+                        <hr class="navbar-divider">
+                        <a href="#" class="navbar-item">
+                            Logout
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="buttons" id="endbuttons">
+                        <a href="./signup.html" class="button is-primary">
+                            <strong>Sing up</strong>
+                        </a>
+                        <a href="./login.html" class="button is-light">
+                            Login
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </nav>
-  <!-- ----------------------------------------------------------------------------------------------------------------------------------------------- -->
-  <header class="masthead">
+</nav>
+
+  <!-- <header class="masthead">
     <div class="container position-relative">
       <div class="row justify-content-center">
         <div class="col-xl-6">
           <div class="text-center text-white">
-            <!-- Page heading-->
             <h1 class="mb-5">Bienvenido al Proyecto Athena.</h1>
             <h3>Aqui podras informarte sobre todo lo relacionado sobre cualquier mitologia.</h3>
-            <!-- Signup form-->
-            <!-- * * * * * * * * * * * * * * *-->
-            <!-- * * SB Forms Contact Form * *-->
-            <!-- * * * * * * * * * * * * * * *-->
-            <!-- This form is pre-integrated with SB Forms.-->
-            <!-- To make this form functional, sign up at-->
-            <!-- https://startbootstrap.com/solution/contact-forms-->
-            <!-- to get an API token!-->
             <form class="form-subscribe" id="contactForm" data-sb-form-api-token="API_TOKEN">
-              <!-- Email address input-->
               <div class="row">
                 <div class="col">
                   <input class="form-control form-control-lg" id="emailAddress" type="email"
@@ -101,21 +97,12 @@
                 <div class="col-auto"><button class="btn btn-primary btn-lg disabled" id="submitButton"
                     type="submit">Buscar</button></div>
               </div>
-              <!-- Submit success message-->
-              <!---->
-              <!-- This is what your users will see when the form-->
-              <!-- has successfully submitted-->
               <div class="d-none" id="submitSuccessMessage">
                 <div class="text-center mb-3">
                   <div class="fw-bolder">Form submission successful!</div>
                   <p>To activate this form, sign up at</p>
-                  <!-- <a class="text-white" href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a> -->
                 </div>
               </div>
-              <!-- Submit error message-->
-              <!---->
-              <!-- This is what your users will see when there is-->
-              <!-- an error submitting the form-->
               <div class="d-none" id="submitErrorMessage">
                 <div class="text-center text-danger mb-3">Error sending message!</div>
               </div>
@@ -124,17 +111,7 @@
         </div>
       </div>
     </div>
-  </header>
-
-  <!-- Bootstrap core JS-->
-  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- Core theme JS-->
-  <!-- <script src="./asdad.js"></script> -->
-  <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-  <!-- * *                               SB Forms JS                               * *-->
-  <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-  <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-  <!-- <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script> -->
+  </header> -->
 
 </body>
 

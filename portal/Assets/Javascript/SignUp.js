@@ -1,4 +1,9 @@
 document.addEventListener("DOMContentLoaded", main);
+document.addEventListener('keydown',function(e){
+    if(e.key === "Escape"){
+        window.location.href="./index.html";
+    }
+});
 
 function main() {
     let formulario = document.getElementById("signupid");

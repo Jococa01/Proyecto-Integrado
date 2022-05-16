@@ -34,7 +34,7 @@ function CloseSession(){
 
 const toggleBurger = () => {
     let burgerIcon = document.getElementById('burger');
-    let dropMenu = document.getElementById('navbarBasicExample');
+    let dropMenu = document.getElementById('navMenu');
     burgerIcon.classList.toggle('is-active');
     dropMenu.classList.toggle('is-active');
   };
