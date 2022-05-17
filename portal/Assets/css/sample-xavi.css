@@ -1,5 +1,10 @@
 @import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
 
+html{
+  background-color: bisque;
+}
+
+
 h1{
     font-family: 'Cinzel Decorative', cursive;
     color: #2a2a2a;
