@@ -1,3 +1,5 @@
+
+
 const tarjeta = document.querySelector('#tarjeta'),
 	  btnAbrirFormulario = document.querySelector('#btn-abrir-formulario'),
 	  formulario = document.querySelector('#formulario-tarjeta'),
@@ -62,21 +64,10 @@ formulario.inputNumero.addEventListener('keyup', (e) => {
 
 	if(valorInput == ''){
 		numeroTarjeta.textContent = '#### #### #### ####';
-
-		logoMarca.innerHTML = '';
 	}
+	
 
-	if(valorInput[0] == 4){
-		logoMarca.innerHTML = '';
-		const imagen = document.createElement('img');
-		imagen.src = 'imgs/tgimg/logos/visa.png';
-		logoMarca.appendChild(imagen);
-	} else if(valorInput[0] == 5){
-		logoMarca.innerHTML = '';
-		const imagen = document.createElement('img');
-		imagen.src = 'img/logos/mastercard.png';
-		logoMarca.appendChild(imagen);
-	}
+	
 
 	// Volteamos la tarjeta para que el usuario vea el frente.
 	mostrarFrente();

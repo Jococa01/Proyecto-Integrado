@@ -50,7 +50,7 @@ body {
 
 .tarjeta .delantera {
 	width: 100%;
-	background: url(../imgs/tgimg/bg-tarjeta/bg-tarjeta-02.jpg);
+	background: url(../imgs/tgimg/bg-tarjeta/bg-tarjeta-01.jpg);
 	background-size: cover;
 }
 
@@ -94,7 +94,7 @@ body {
 
 /* ---------- Tarjeta Trasera ----------*/
 .trasera {
-	background: url(../imgs/tgimg/bg-tarjeta/bg-tarjeta-02.jpg);
+	background: url(../imgs/tgimg/bg-tarjeta/bg-tarjeta-01.jpg);
 	background-size: cover;
 	position: absolute;
 	top: 0;
@@ -190,7 +190,7 @@ body {
 
 /* ---------- Formulario Tarjeta ----------*/
 .formulario-tarjeta {
-	background: gray;
+	background: #fff;
 	width: 100%;
 	max-width: 700px;
 	padding: 150px 30px 30px 30px;
