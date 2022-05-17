@@ -56,4 +56,51 @@ class usuarios extends connection{
 
     }
 
+    public function GetUsers(){
+        try{
+            $stmtUserC = $this->conn->prepare("SELECT count(*) as users FROM usuario");
+            if ($stmtUserC->execute() && $stmtUserC->rowCount() > 0) {
+                return $stmtUserC->fetch(PDO::FETCH_ASSOC);
+            }
+        } catch (Exception | PDOException $e){
+            echo 'Falló la búsqueda'.$e->getMessage();
+        }
+    }
+
+    public function GetEntries(){
+        try{
+            $stmtUserC = $this->conn->prepare("SELECT count(*) as entradas FROM entrada");
+            if ($stmtUserC->execute() && $stmtUserC->rowCount() > 0) {
+                return $stmtUserC->fetch(PDO::FETCH_ASSOC);
+            }
+        } catch (Exception | PDOException $e){
+            echo 'Falló la búsqueda'.$e->getMessage();
+        }
+    }
+
+    public function userList(){
+        try{
+
+            $sqlAll = "SELECT email,contrasenya,nombre,tipo FROM usuario";
+            $rowsAll = $this->conn->query($sqlAll);
+            while ($Usuario = $rowsAll->fetch(PDO::FETCH_ASSOC)) {
+                array_push($this->Usuarios, new usuario(
+                    $Usuario["email"],
+                    $Usuario["contrasenya"],
+                    $Usuario["nombre"],
+                    $Usuario["tipo"]
+                ));
+            }
+            $this->Usuarios;
+        }catch (Exception | PDOException $e){
+            echo 'Falló la búsqueda'.$e->getMessage();
+        }
+    }
+    public function drawUsers(){
+        $array=[];
+        for($n=0;$n<count($this->Usuarios);$n++){
+            $array[$n]=[$this->Usuarios[$n]->GetEmail(),$this->Usuarios[$n]->GetNombre(),$this->Usuarios[$n]->GetTipo()];
+        }
+        return $array;
+    }
 }

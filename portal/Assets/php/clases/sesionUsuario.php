@@ -1,6 +1,6 @@
 <?php
 
-class sesionUsuario
+class sesionUsuario extends usuarios
 {
 
     public function __construct()
@@ -8,8 +8,9 @@ class sesionUsuario
         session_start();
     }
 
-    public function SetCurrentUser($user){
+    public function SetCurrentUser($user,$level){
         $_SESSION['user'] = $user;
+        $_SESSION['level'] = $level;
     }
 
     public function GetCurrentUser(){

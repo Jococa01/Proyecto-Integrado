@@ -68,7 +68,8 @@ function Checkaccount(data){
 
 function StartSession(passeddata){
     const xhttp = new XMLHttpRequest();
-    let user = passeddata['nombre'];
+    let user = passeddata['email'];
+    let level = passeddata['tipo'];
     xhttp.addEventListener("readystatechange", function () {
         if (this.readyState == 4 && this.status == 200) {
             let data = JSON.parse(this.responseText);
@@ -77,5 +78,5 @@ function StartSession(passeddata){
     });
     xhttp.open("POST", "/portal/Assets/php/session.php", true);
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    xhttp.send("user="+user);
+    xhttp.send("user="+user+"&level="+level);
 }

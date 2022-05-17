@@ -7,70 +7,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>sistema de admin</title>
     <link rel="stylesheet" href="portal/Assets/css/sample.css">
+    <script src="./portal/Assets/Javascript/cp.js"></script>
 
 </head>
 
 <body>
-    <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+  <nav class="navbar is-dark">
+    <div class="container">
         <div class="navbar-brand">
-          <a class="navbar-item" href="">
-            <img src="./portal/Assets/imgs/Logo-white.png" width="" height="50">
-          </a>
-    
-          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-          </a>
-        </div>
-    
-        <div id="navbarBasicExample" class="navbar-menu">
-          <div class="navbar-start">
-            <a class="navbar-item">
-              Home
+            <a href="./index.html" class="navbar-item">
+                <img src="./portal/Assets/imgs/Logo-white.png" width="32" height="32">
             </a>
-    
-            <a class="navbar-item">
-              Documentation
+
+            <a class="navbar-burger" data-target="navMenu" id="burger">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
             </a>
-    
-            <div class="navbar-item has-dropdown is-hoverable">
-              <a class="navbar-link">
-                More
-              </a>
-    
-              <div class="navbar-dropdown">
-                <a class="navbar-item">
-                  About
-                </a>
-                <a class="navbar-item">
-                  Jobs
-                </a>
-                <a class="navbar-item">
-                  Contact
-                </a>
-                <hr class="navbar-divider">
-                <a class="navbar-item">
-                  Report an issue
-                </a>
-              </div>
-            </div>
-          </div>
-    
-          <div class="navbar-end">
-            <div class="navbar-item">
-              <div class="buttons" id="endbuttons">
-                <a class="button is-primary" href="./signup.html">
-                  <strong>Sign up</strong>
-                </a>
-                <a class="button is-light" href="./login.html">
-                  Log in
-                </a>
-              </div>
-            </div>
-          </div>
         </div>
-      </nav>
+
+        <div class="navbar-menu" id="navMenu">
+            <div class="navbar-start">
+                <a href="./index.html" class="navbar-item">
+                    Home
+                </a>
+                <a href="#" class="navbar-item">
+                    Blog
+                </a>
+                <a href="#" class="navbar-item">
+                    About
+                </a>
+                <a href="#" class="navbar-item">
+                    Contact
+                </a>
+
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a href="#" class="navbar-link">
+                        More
+                    </a>
+
+                    <div class="navbar-dropdown is-left">
+                        <a href="#" class="navbar-item">
+                            Profile
+                        </a>
+                        <a href="#" class="navbar-item">
+                            Settings
+                        </a>
+                        <hr class="navbar-divider">
+                        <a href="#" class="navbar-item">
+                            Logout
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="buttons" id="endbuttons">
+                        <a href="./signup.html" class="button is-primary">
+                            <strong>Sing up</strong>
+                        </a>
+                        <a href="./login.html" class="button is-light">
+                            Login
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
     <section class="hero is-info welcome is-small">
         <div class="hero-body">
             <div class="container">
@@ -87,14 +92,14 @@
         <div class="tile is-ancestor has-text-centered">
             <div class="tile is-parent">
                 <article class="tile is-child box">
-                    <p class="title">439k</p>
+                    <p class="title" id="usernum">NaN</p>
                     <p class="subtitle">Users</p>
                 </article>
             </div>
 
             <div class="tile is-parent">
                 <article class="tile is-child box">
-                    <p class="title">19</p>
+                    <p class="title" id="entrynum">NaN</p>
                     <p class="subtitle">Entradas</p>
                 </article>
             </div>
@@ -117,15 +122,7 @@
                     <div class="card-table">
                         <div class="content">
                             <table class="table is-fullwidth is-striped">
-                                <tbody>
-                                    <tr>
-                                        <td width="5%"><i class="fa fa-bell-o"></i></td>
-                                        <td>Lorum ipsum dolem aire</td>
-                                        <td class="level-right"><a class="button is-small is-primary"
-                                                href="#">Action</a>
-                                        </td>
-                                    </tr>
-
+                                <tbody id="usertable">
                                 </tbody>
                             </table>
                         </div>
@@ -159,8 +156,6 @@
                                                 href="#">Action</a>
                                         </td>
                                     </tr>
-                                 
-
                                 </tbody>
                             </table>
                         </div>

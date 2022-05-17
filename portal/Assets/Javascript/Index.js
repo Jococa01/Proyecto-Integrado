@@ -8,7 +8,9 @@ function main() {
             console.log(data);
             if(data !=null){
                 document.getElementById('endbuttons').innerHTML='<div class="navbar-item has-dropdown is-hoverable"><a class="navbar-link">'+data['user']+'</a><div class="navbar-dropdown"><a class="navbar-item" id="close">Cerrar Sesión</a></div></div>';
-
+                if(data['level']=="administrador"){
+                    document.getElementById('endbuttons').innerHTML='<div class="navbar-item has-dropdown is-hoverable"><a class="navbar-link">'+data['user']+'</a><div class="navbar-dropdown"><a class="navbar-item" id="close">Cerrar Sesión</a><a href="./sisadmin.html" class="navbar-item">Panel de control</a></div></div>';
+                }
                 document.getElementById('close').addEventListener('click',CloseSession);
             }
             document.getElementById('burger').addEventListener('click',toggleBurger);
