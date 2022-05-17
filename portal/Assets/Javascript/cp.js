@@ -11,7 +11,7 @@ function main() {
             document.getElementById('entrynum').innerHTML=data[1]['entradas'];
 
             for(let i=0; i < data[2].length;i++){
-                document.getElementById('usertable').innerHTML+='<tr><td width="5%"><img src="./portal/Assets/imgs/avatar.png"></td><td>'+data[2][i][0]+' / '+data[2][i][1]+'</td><td class="level-right"><a class="button is-small is-primary"href="#">Action</a></td></tr>'
+                document.getElementById('usertable').innerHTML+='<tr><td width="64px"><img src="./portal/Assets/imgs/avatar.png"></td><td><div style="vertical-align: middle;"><h3>'+data[2][i][0]+'</h3><h5>'+data[2][i][1]+'</h5></div></td><td class="level-right"><a class="button is-small is-primary"href="#">Action</a></td></tr>'
             }
             document.getElementById('burger').addEventListener('click',function(){
                 let burgerIcon = document.getElementById('burger');
