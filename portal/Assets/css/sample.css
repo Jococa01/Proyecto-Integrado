@@ -7,4 +7,25 @@
 .erroneo::placeholder{
     color: red;
     transition:color .5s;
+    
+}
+body{
+    background-color: rgb(225, 215, 215)
+}
+
+h1{
+    color: black;
+    font-size: 50px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    margin-top: 3.5%;
+}
+
+h2{
+    color: black;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
 }
