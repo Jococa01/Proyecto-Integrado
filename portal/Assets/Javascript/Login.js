@@ -76,7 +76,7 @@ function StartSession(passeddata){
             console.log(data);
         }
     });
-    xhttp.open("GET", "/portal/Assets/php/session.php", true);
+    xhttp.open("POST", "/portal/Assets/php/session.php", true);
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhttp.send("user="+user+"&level="+level);
 }
