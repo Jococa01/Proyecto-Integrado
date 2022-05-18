@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="../portal/Assets/css/sample-xavi.css">
   <link rel="shortcut icon" href="../portal/Assets/imgs/favicon.ico">
   <title>Mitología Romana</title>
-  <script src="comentaris.js"></script>
+  <script src="../portal/Assets/Javascript/comentaris.js"></script>
 </head>
 
 <body>
@@ -71,7 +71,7 @@
         considerarse formada por dos partes:
         la primera, mayoritariamente antigua y ritualista, representaba los mitos y cultos autóctonos; la segunda,
         principalmente tardía y
-        0literaria, consiste en la fusión de la anterior con varios préstamos, completamente nuevos, procedentes de la
+        literaria, consiste en la fusión de la anterior con varios préstamos, completamente nuevos, procedentes de la
         mitología griega.
       </p>
 
@@ -119,11 +119,11 @@
     <section>
       <h2>COMENTARIOS</h2>
       <br>
-      <form class="form">
-        <input class="text-input" name="titulo" placeholder="TÍTULO" required type="text"></input>
+      <form class="form" id="formulario">
+        <input id="titulo" class="text-input" name="titulo" placeholder="TÍTULO" required type="text"></input>
         <br>
         <p class="field">
-          <textarea class="textarea" cols="50" rows="4" name="comentario" placeholder="ESCRIBE AQUÍ TU COMENTARIO" required
+          <textarea id="comentario" class="textarea" cols="50" rows="4" name="comentario" placeholder="ESCRIBE AQUÍ TU COMENTARIO" required
             type="text"></textarea>
         </p>
         <p class="field">
@@ -131,6 +131,18 @@
         </p>
       </form>
     </section>
+
+    <table>
+      <thead>
+        <tr>
+          <th>COMENTARIOS</th>
+        </tr>
+      </thead>
+      <tbody id="rows">
+
+      </tbody>
+
+    </table>
   </footer>
 
 </body>
