@@ -5,12 +5,12 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="portal/Assets/css/sample.css">
-  <link rel="shortcut icon" href="portal/Assets/imgs/favicon.ico">
+  <link rel="stylesheet" href="./portal/Assets/css/sample.css">
+  <link rel="shortcut icon" href="./portal/Assets/imgs/favicon.ico">
 
   <!-- Debajo es el ccs y una fuente para la targeta -->
   <link href="https://fonts.googleapis.com/css?family=Lato|Liu+Jian+Mao+Cao&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="portal/Assets/css/estilos.css">
+  <link rel="stylesheet" href="./portal/Assets/css/estilos.css">
 
   <title>Donar</title>
 </head>
@@ -111,11 +111,10 @@
             <strong>Formas de pago</strong>
           </p>
           <form class="box">
-            <div class="select is-medium" id="tipo">
-              <select>
-                <option value="1"> visa</option>
-                <option value="2">Mastercard</option>
-              <!-- si hay tiempo poner paypal -->
+            <div class="select" >
+              <select class="is-focused" id="tipo">
+                <option value="1" >Visa</option>
+                <option selected value="2">Mastercard</option>
               </select>
             </div>
           </form>
@@ -136,7 +135,7 @@
               <section class="tarjeta" id="tarjeta">
                 <div class="delantera">
                   <div class="logo-marca" id="logo-marca">
-                     <img src="portal/Assets/imgs/tgimg/logos/visa.png" alt="">
+                     <!-- <img src="portal/Assets/imgs/tgimg/logos/visa.png" alt=""> -->
                   </div>
                   <img src="portal/Assets/imgs/tgimg/chip-tarjeta.png" class="chip" alt="">
                   <div class="datos">
