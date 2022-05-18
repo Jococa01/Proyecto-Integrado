@@ -70,6 +70,7 @@ function StartSession(passeddata){
     const xhttp = new XMLHttpRequest();
     let user = passeddata['email'];
     let level = passeddata['tipo'];
+    console.log(level);
     xhttp.addEventListener("readystatechange", function () {
         if (this.readyState == 4 && this.status == 200) {
             let data = JSON.parse(this.responseText);
