@@ -1,16 +1,16 @@
-document.addEventListener("DOMContentLoaded", main);
+// document.addEventListener("DOMContentLoaded", main);
 
-function main() {
-    const xhttp = new XMLHttpRequest();
-    xhttp.addEventListener("readystatechange", function () {
-        if (this.readyState == 4 && this.status == 200) {
-            let data = JSON.parse(this.responseText);
-            console.log(data);
-            if(data !=null){
+// function main() {
+//     const xhttp = new XMLHttpRequest();
+//     xhttp.addEventListener("readystatechange", function () {
+//         if (this.readyState == 4 && this.status == 200) {
+//             let data = JSON.parse(this.responseText);
+//             console.log(data);
+//             if(data !=null){
                
-            }
-        }
-        });
-    xhttp.open("POST", "/portal/Assets/php/index.php", true);
-    xhttp.send();
-}
+//             }
+//         }
+//         });
+//     xhttp.open("POST", "/portal/Assets/php/index.php", true);
+//     xhttp.send();
+// }
