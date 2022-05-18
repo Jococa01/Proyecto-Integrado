@@ -11,14 +11,8 @@ function main() {
             document.getElementById('entrynum').innerHTML=data[1]['entradas'];
 
             for(let i=0; i < data[2].length;i++){
-                document.getElementById('usertable').innerHTML+='<tr><td width="64px"><img src="./portal/Assets/imgs/avatar.png"></td><td><div style="vertical-align: middle;"><h3>'+data[2][i][0]+'</h3><h5>'+data[2][i][1]+'</h5></div></td><td class="level-right"><a class="button is-small is-primary"href="#">Action</a></td></tr>'
+                document.getElementById('usertable').innerHTML+='<tr><td width="64px"><img src="./portal/Assets/imgs/avatar.png"></td><td><div style="vertical-align: middle;"><h5>'+data[2][i][0]+'</h5><h6>'+data[2][i][1]+'</h6></div></td><td style="vertical-align: middle;"><a class="button is-primary is-small"href="#" style="display:block; margin: auto;">Action</a></td></tr>'
             }
-            document.getElementById('burger').addEventListener('click',function(){
-                let burgerIcon = document.getElementById('burger');
-                let dropMenu = document.getElementById('navMenu');
-                burgerIcon.classList.toggle('is-active');
-                dropMenu.classList.toggle('is-active');
-            });
         }
         });
     xhttp.open("POST", "/portal/Assets/php/sisadmin.php", false);

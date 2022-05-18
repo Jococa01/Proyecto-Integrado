@@ -14,7 +14,7 @@ class sesionUsuario extends usuarios
     }
 
     public function GetCurrentUser(){
-        return $_SESSION['user'];
+        return [$_SESSION['user'],$_SESSION['level']];
     }
 
     public function CloseSession(){
