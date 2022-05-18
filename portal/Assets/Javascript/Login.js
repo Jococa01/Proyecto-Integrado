@@ -51,7 +51,7 @@ function CheckPassword(data){
     if(data['contrasenya']==md5(password.value)){
         console.log("Pass correcta, se introdujo: "+md5(password.value)+" y la contraseña era: "+data['contrasenya']);
         StartSession(data);
-        window.location.href="./index.html";
+        // window.location.href="./index.html";
     }else{
         console.log("Pass incorrecta, se introdujo: "+md5(password.value)+" y la contraseña era: "+data['contrasenya']);
     }
@@ -76,7 +76,7 @@ function StartSession(passeddata){
             console.log(data);
         }
     });
-    xhttp.open("POST", "/portal/Assets/php/session.php", true);
+    xhttp.open("GET", "/portal/Assets/php/session.php", true);
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhttp.send("user="+user+"&level="+level);
 }
