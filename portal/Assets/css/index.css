@@ -61,24 +61,43 @@ input {
 
 div#contenedor{
   position: absolute;
-  background-color: #00c8ff8d;
+  /* background-color: #a0eafe8d; */
+  background-image: linear-gradient(#c3f2ff8d, #82e4ff8d);
   color: white;
   height: 100%;
   width: 100%;
   padding-top: 10%;
 }
 
-form {
+#searchfield>input {
   width: 100%;
   max-width: 600px;
   margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 5%;
+  margin-top: 2em;
+}
+#searchfield>#searchlist{
+  display: block;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  display: block;
+  justify-content: left;
+  align-items: center;
+  /* background-color: white; */
+  color: #000000;
+  border-radius: 5px;
+}
+#searchlist>li{
+  background-color: white;
+  margin-top: 5px;
+  border-radius: 5px;
+  padding: .5em;
 }
 
 #busqueda{
   width: 60%;
-  margin-right: 20px;
+  /* margin-right: 20px; */
 }

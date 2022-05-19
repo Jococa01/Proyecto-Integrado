@@ -27,7 +27,9 @@ function loadData(form) {
             if (data == null) {
                 console.log("Se ha creado el usuario");
                 document.getElementById("mail").style.borderColor = "";
-                window.location.href='./index.html';
+                setTimeout(function(){
+                    window.location.href='./index.html';
+                }, 2000);
             }
             else {
                 console.log("Ya hay un usuario con esa cuenta de correo");
@@ -36,8 +38,6 @@ function loadData(form) {
                 let p = document.createElement("p");
                 p.innerHTML="Ya hay un usuario con esa cuenta de correo"
                 p.style.color="red";
-                // p.appendChild(document.getElementById("dos"));
-                // p.after(document.getElementById("mail"));
             }
         }
     });

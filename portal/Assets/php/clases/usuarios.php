@@ -80,7 +80,6 @@ class usuarios extends connection{
 
     public function userList(){
         try{
-
             $sqlAll = "SELECT email,contrasenya,nombre,tipo FROM usuario";
             $rowsAll = $this->conn->query($sqlAll);
             while ($Usuario = $rowsAll->fetch(PDO::FETCH_ASSOC)) {

@@ -10,6 +10,7 @@
   <link rel="shortcut icon" href="./portal/Assets/imgs/favicon.ico">
   <script src="./portal/Assets/Javascript/Index.js"></script>
   <script src="./portal/Assets/Javascript/sessioncheck.js"></script>
+  <script src="./portal/Assets/Javascript/search.js"></script>
   <title>Main</title>
 </head>
 
@@ -36,12 +37,12 @@
           </a>
           <a href="./mapadeimagen.html" class="navbar-item">
             Mitologías
-          <a href="#" class="navbar-item">
-            Sobre Nosotros
-          </a>
-          <a href="./donaciones.html" class="navbar-item">
-            Donaciones
-          </a>
+            <a href="#" class="navbar-item">
+              Sobre Nosotros
+            </a>
+            <a href="./donaciones.html" class="navbar-item">
+              Donaciones
+            </a>
         </div>
 
         <div class="navbar-end">
@@ -60,17 +61,17 @@
     </div>
   </nav>
   <div id="contenedor">
-    <h1>Bienvenido al Proyecto Atenea.</h1>
-    <h3>Aqui podras informarte sobre todo lo relacionado sobre cualquier mitologia.</h3>
-
-    <form>
-      <input id="busqueda" type="text" placeholder="Busca aqui tu mitologia" />
-      <div><button id="boto" type="submit" href="#">Buscar</button></div>
-
-    </form>
+    <div style="padding: 2em; margin-top: 0;">
+      <h1>Bienvenido al Proyecto Atenea.</h1>
+      <h3>Aqui podras informarte sobre todo lo relacionado con la mitologia.</h3>
+      <div id="searchfield">
+        <input id="busqueda" type="text" class="input" placeholder="Busca aqui tu mitologia" name="search"
+          autocomplete="off" />
+        <ul id="searchlist">
+        </ul>
+      </div>
+    </div>
   </div>
-
-
 </body>
 
 </html>
