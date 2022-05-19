@@ -14,23 +14,33 @@ PD2: haz com dumbledore y dona-nos 5 punts <3 :)
 
 class comentarios extends connection
 {
-    protected $titulo;
-    protected $comentario;
-    protected $identrada;
+    // protected $titulo;
+    // protected $comentario;
+    // protected $identrada;
 
-    public function __construct($titulo, $comentario, $identrada)
+    // public function __construct($titulo, $comentario, $identrada)
+    // {
+    //     $this->titulo = $titulo;
+    //     $this->comentario = $comentario;
+    //     $this->identrada = $identrada;
+    // }
+
+
+    public function insertComentario($data)
     {
-        $this->titulo = $titulo;
-        $this->comentario = $comentario;
-        $this->identrada = $identrada;
-    }
+        try {
+            $stmtInsert = $this->conn->prepare("INSERT INTO comentarios VALUES(?,?)");
+            $stmtInsert->bindParam(1, $titulo, PDO::PARAM_STR);
+            $stmtInsert->bindParam(2, $comentario, PDO::PARAM_STR);
 
+            $titulo = $data["titulo"];
+            $comentario = $data["comentario"];
 
-    public function insertComentario($titulo, $comentario)
-    {
-        $sql = "INSERT INTO comentarios (titulo, comentario) VALUES (:titulo,:comentario)";
-        $stmt = $this->conn->prepare($sql);
-        $stmt->bindParam(":titulo", $titulo);
-        $stmt->bindParam(":comentario", $comentario);
+            $stmtInsert->execute();
+            return $stmtInsert->rowCount();
+
+        } catch (Exception | PDOException $e) {
+            echo 'Falló la inserción: ' . $e->getMessage();
+        }
     }
 }
