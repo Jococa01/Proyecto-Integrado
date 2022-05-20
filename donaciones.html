@@ -8,21 +8,20 @@
   <link rel="stylesheet" href="./portal/Assets/css/sample.css">
   <link rel="shortcut icon" href="./portal/Assets/imgs/favicon.ico">
   <script src="./portal/Assets/Javascript/sessioncheck.js"></script>
-  
+
   <!-- Debajo es el ccs y una fuente para la targeta -->
   <link href="https://fonts.googleapis.com/css?family=Lato|Liu+Jian+Mao+Cao&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="portal/Assets/css/estilos.css">
+  <link rel="stylesheet" href="./portal/Assets/css/estilos.css">
 
   <title>Donar</title>
 </head>
 
 <body>
-
   <nav class="navbar is-dark">
     <div class="container">
       <div class="navbar-brand">
         <a href="#" class="navbar-item">
-          <img src="./portal/Assets/imgs/Logo-white.png" width="32" height="32">
+          <img src="/portal/Assets/imgs/Logo-white.png" width="32" height="32">
         </a>
 
         <a class="navbar-burger" data-target="navMenu" id="burger">
@@ -42,7 +41,7 @@
           <a href="#" class="navbar-item">
             Sobre Nosotros
           </a>
-          <a href="#" class="navbar-item">
+          <a href="./donaciones.html" class="navbar-item">
             Donaciones
           </a>
         </div>
@@ -62,56 +61,66 @@
       </div>
     </div>
   </nav>
-
   <article>
-    
-  
-  <div class="columns is-multiline is-mobile"></div>
-    <div class="columns">
-    <div class="column is-two-fifths">
-      <p class="h1dos has-text-centered">
-        <strong>¿Porque apoyarnos?</strong> 
-      </p>
-      <form class="box">
-        <p>
-          "At vero eos et accusamus et iusto odio dignissimos ducimus 
-          qui blanditiis praesentium voluptatum deleniti atque corrupti 
-          quos dolores et quas molestias excepturi sint occaecati 
-          cupiditate non provident, similique sunt in culpa qui officia 
-          deserunt mollitia animi, id est laborum et dolorum fuga.
-           Et harum quidem rerum facilis est et expedita distinctio.
-            Nam libero tempore, cum soluta nobis est eligendi optio
-             cumque nihil impedit quo minus id quod maxime placeat 
-             facere possimus, omnis voluptas assumenda est, omnis dolor 
-             repellendus. Temporibus autem quibusdam et aut officiis debitis 
-             aut rerum necessitatibus saepe eveniet ut et voluptates 
-             repudiandae sint et molestiae non recusandae. Itaque earum
-              rerum hic tenetur a sapiente delectus, ut aut reiciendis
-               voluptatibus maiores alias consequatur aut perferendis 
-               doloribus asperiores repellat."
-        </p>
 
-      </form>
-    
-    </div>
-    
-    <div class="column ">
-      <p class="h1dos">
-        <strong> Como donar</strong>
-      </p>
-    
-      <div class="columns">
-        <div class="column ">
+
+
+    <div class="columns">
+      <div class="column is-half">
+        <p class="h1dos has-text-centered">
+          <strong>¿Porque apoyarnos?</strong>
+        </p>
+        <form class="box">
+          <p>
+            "At vero eos et accusamus et iusto odio dignissimos ducimus
+            qui blanditiis praesentium voluptatum deleniti atque corrupti
+            quos dolores et quas molestias excepturi sint occaecati
+            cupiditate non provident, similique sunt in culpa qui officia
+            deserunt mollitia animi, id est laborum et dolorum fuga.
+            Et harum quidem rerum facilis est et expedita distinctio.
+            Nam libero tempore, cum soluta nobis est eligendi optio
+            cumque nihil impedit quo minus id quod maxime placeat
+            facere possimus, omnis voluptas assumenda est, omnis dolor
+            repellendus. Temporibus autem quibusdam et aut officiis debitis
+            aut rerum necessitatibus saepe eveniet ut et voluptates
+            repudiandae sint et molestiae non recusandae. Itaque earum
+            rerum hic tenetur a sapiente delectus, ut aut reiciendis
+            voluptatibus maiores alias consequatur aut perferendis
+            doloribus asperiores repellat."
+          </p>
+
+        </form>
+        <div class="is-half">
+          <p class="h1dos has-text-centered">
+            <strong>Formas de pago</strong>
+          </p>
           <form class="box">
-            
-            
-            <div class="contenedor">
-	
+            <label>Con que quiers pagar</label>
+            <div class="select" >
+              <select class="is-focused" id="tipo">
+                <option value="1" >Visa</option>
+                <option selected value="2">Mastercard</option>
+              </select>
+            </div>
+          </form>
+        </div>
+
+           
+
+      </div>
+      <!-- añadir una columna abajo para poner los tipos de pago -->
+
+
+
+
+
+            <div class="contenedor" >
+              <!-- Poner algo para para ocupar el espacio de targetas o poner una por defacto -->
               <!-- Tarjeta -->
               <section class="tarjeta" id="tarjeta">
                 <div class="delantera">
                   <div class="logo-marca" id="logo-marca">
-                    <!-- <img src="img/logos/visa.png" alt=""> -->
+                     <!-- <img src="portal/Assets/imgs/tgimg/logos/visa.png" alt=""> -->
                   </div>
                   <img src="portal/Assets/imgs/tgimg/chip-tarjeta.png" class="chip" alt="">
                   <div class="datos">
@@ -124,7 +133,7 @@
                         <p class="label">Nombre Tarjeta</p>
                         <p class="nombre">Jhon Doe</p>
                       </div>
-            
+
                       <div class="grupo" id="expiracion">
                         <p class="label">Expiracion</p>
                         <p class="expiracion"><span class="mes">MM</span> / <span class="year">AA</span></p>
@@ -132,7 +141,7 @@
                     </div>
                   </div>
                 </div>
-            
+
                 <div class="trasera">
                   <div class="barra-magnetica"></div>
                   <div class="datos">
@@ -147,21 +156,22 @@
                       <p class="ccv"></p>
                     </div>
                   </div>
-                  <p class="leyenda">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus exercitationem,
+                  <p class="leyenda">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
+                    exercitationem,
                     voluptates illo.</p>
                   <a href="#" class="link-banco">www.tubanco.com</a>
                 </div>
               </section>
-            
+
               <!-- Contenedor Boton Abrir Formulario -->
               <div class="contenedor-btn">
                 <button class="btn-abrir-formulario" id="btn-abrir-formulario">
                   <i class="fas fa-plus"></i>
                 </button>
               </div>
-            
+
               <!-- Formulario -->
-              <form action="" id="formulario-tarjeta" class="formulario-tarjeta">
+              <form id="formulario-tarjeta" class="formulario-tarjeta">
                 <div class="grupo">
                   <label for="inputNumero">Número Tarjeta</label>
                   <input type="text" id="inputNumero" maxlength="19" autocomplete="off">
@@ -188,7 +198,7 @@
                       </div>
                     </div>
                   </div>
-            
+
                   <div class="grupo ccv">
                     <label for="inputCCV">CCV</label>
                     <input type="text" id="inputCCV" maxlength="3">
@@ -196,40 +206,21 @@
                 </div>
                 <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
                 <script src="portal/Assets/Javascript/Targetadon.js"></script>
-              
+
                 <button type="submit" class="btn-enviar">Enviar</button>
-             
               </form>
+
             </div>
-            
-          </form>
-        </div>
-        <div class="column is-one-third">
-        <form class="box has-text-centered">
-          <p class="h1dos">Metodos de pago</p>
-          <table>
-            
-            <tr>
-              <td><a href="metodosdepago/siva.html"><img src="portal/Assets/imgs/tgimg/logos/visa.png" alt=""></a></td>
-              <td><a href="metodosdepago/PayPay.html"><img src="metodosdepago/img_pago/paypay.png" alt=""></a></td>
-            </tr>
-            <tr>
-              <td><a href="metodosdepago/Masterdast.html"><img src="metodosdepago/img_pago/jupiter_ccexpress.png" alt="" ></a></td>
-              <td><a href="metodosdepago/TalivanExpres.html"><img src="metodosdepago/img_pago/telefono-taliban-express.jpg" alt=""></a></td>
-            </tr>
 
-          </table>
 
-        </form>
+          </div>
+
+
+            </form>
+          </div>
         </div>
-      </div>
       </div>
     </div>
   </article>
 
-    </div>
-
-  </footer>
-
- 
 </body>
