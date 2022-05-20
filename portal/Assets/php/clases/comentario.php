@@ -17,7 +17,7 @@ class comentario extends connection{
 public function insertComentario($data)
     {
         try {
-            $stmtInsert = $this->conn->prepare("INSERT INTO coment VALUES(?,?)");
+            $stmtInsert = $this->conn->prepare("INSERT INTO comentarios VALUES(?,?)");
             $stmtInsert->bindParam(1, $titulo, PDO::PARAM_STR);
             $stmtInsert->bindParam(2, $comentario, PDO::PARAM_STR);
 
@@ -36,12 +36,12 @@ public function insertComentario($data)
     {
         try {
 
-            $sqlAll = "SELECT titulo,comntario FROM coment";
+            $sqlAll = "SELECT titulo,comentario FROM comentarios";
             $rowsAll = $this->conn->query($sqlAll);
             while ($Coment = $rowsAll->fetch(PDO::FETCH_ASSOC)) {
                 array_push($this->Coment, new comentarios(
                     $Coment["titulo"],
-                    $Coment["comntario"]
+                    $Coment["comentario"]
                   
                 ));
             }

@@ -15,6 +15,7 @@ function main() {
     formulario.addEventListener("submit", function (e) {
         e.preventDefault();
         loadData(this);
+        alert("su comentario se a subido");
     });
     draw();
 
@@ -56,7 +57,7 @@ function draw() {
 
             for (let i = 0; i < data[0].length; i++) {
                 document.getElementById('rows').innerHTML += 
-                '<tr><td><div class="card"><div class="card-image"></div><div class="card-content"><div class="media"><div class="media-left"><figure class="image is-48x48"><img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image"></figure></div><div class="media-content"><p class="title is-4">'+ data[0][i][0] +'</p></div></div> <div class="content">'+ data[0][i][1] +'</div></div></div></td></tr>'
+                '<tr><td><div class="card"><div class="card-image"></div><div class="card-content"><div class="media"><div class="media-left"><figure class="image is-48x48"><img src="../portal/Assets/imgs/avatar.png" alt="Placeholder image"></figure></div><div class="media-content"><p class="title is-4">'+ data[0][i][0] +'</p></div></div> <div class="content">'+ data[0][i][1] +'</div></div></div></td></tr>'
             }
         }
     });
