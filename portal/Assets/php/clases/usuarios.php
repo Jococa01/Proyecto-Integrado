@@ -42,5 +42,13 @@ class usuarios extends connection{
         }
 
     }
+        public function drawUsers(){
+        $array=[];
+        for($n=0;$n<count($this->Usuarios);$n++){
+            $array[$n]=[$this->Usuarios[$n]->GetEmail(),$this->Usuarios[$n]->GetNombre(),$this->Usuarios[$n]->GetTipo()];
+        }
+        return $array;
+    }
+
 
 }
