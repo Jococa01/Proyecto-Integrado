@@ -1,5 +1,6 @@
 <?php
-
+// Script de Joan
+// Creo la clase que me servirá para establecer la conexión con la base de datos del local del servidor
 class connection{
     protected $conn;
     public function __construct()

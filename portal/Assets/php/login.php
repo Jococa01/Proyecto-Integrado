@@ -1,4 +1,6 @@
 <?php
+// Script de Joan
+//Utilizo el script de autoload para acceder a la carpeta donde tengo las clases almacenadas
 require_once('autoload.php');
 
 // //Inserción de prueba para la base de datos
@@ -10,13 +12,9 @@ require_once('autoload.php');
 //     "tipo" => "administrador"
 // ];
 
-// //Creo un objeto de la clase de usuarios
+// //Creo un objeto de la clase de usuarios y otro de la sesionUsuario
 $Users =  new usuarios();
 $Sesion = new sesionUsuario();
-
-// echo json_encode("hola");
-
-// $Users->newUser($SampleMail);
 
 // //Cojo lo que ha enviado el formulario de login, en este caso es la direccion de correo
 $result = $Users->searchUser($_POST["email"]);

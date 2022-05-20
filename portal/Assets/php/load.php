@@ -1,8 +1,12 @@
 <?php
+// Script de Joan
+//Utilizo el script de autoload para acceder a la carpeta donde tengo las clases almacenadas
 require_once('autoload.php');
 
+// Creo un objeto de la clase entradas
 $entradas = new entradas();
 
+// Obtengo la información de la base de datos de la entrada seleccionada y cargo la información en la página de forma dinámica
 $id = $_GET['page'];
 $titulo = $entradas->getEntry($id)['titulo'];
 $contenido = $entradas->getEntry($id)['contenido'];
