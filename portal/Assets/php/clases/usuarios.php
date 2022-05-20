@@ -42,13 +42,38 @@ class usuarios extends connection{
         }
 
     }
-        public function drawUsers(){
-        $array=[];
-        for($n=0;$n<count($this->Usuarios);$n++){
-            $array[$n]=[$this->Usuarios[$n]->GetEmail(),$this->Usuarios[$n]->GetNombre(),$this->Usuarios[$n]->GetTipo()];
-        }
-        return $array;
-    }
 
+
+
+
+
+
+    // public function listcom()
+    // {
+    //     try {
+
+    //         $sqlAll = "SELECT titulo,comentario FROM coment";
+    //         $rowsAll = $this->conn->query($sqlAll);
+    //         while ($Usuario = $rowsAll->fetch(PDO::FETCH_ASSOC)) {
+    //             array_push($this->Com, new usuario(
+    //                 $Usuario["email"],
+    //                 $Usuario["contrasenya"],
+    //                 $Usuario["nombre"],
+    //                 $Usuario["tipo"]
+    //             ));
+    //         }
+    //         $this->Com;
+    //     } catch (Exception | PDOException $e) {
+    //         echo 'Falló la búsqueda' . $e->getMessage();
+    //     }
+    // }
+    // public function drawcom()
+    // {
+    //     $array = [];
+    //     for ($n = 0; $n < count($this->Usuarios); $n++) {
+    //         $array[$n] = [$this->Usuarios[$n]->GetEmail(), $this->Usuarios[$n]->GetNombre(), $this->Usuarios[$n]->GetTipo()];
+    //     }
+    //     return $array;
+    // }
 
 }

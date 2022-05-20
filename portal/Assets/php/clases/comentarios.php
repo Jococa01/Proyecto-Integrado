@@ -12,35 +12,60 @@ PD2: haz com dumbledore y dona-nos 5 punts <3 :)
 
 
 
-class comentarios extends connection
+class comentarios 
 {
-    // protected $titulo;
-    // protected $comentario;
-    // protected $identrada;
+    protected $titulo;
+    protected $comentario;
+    
 
-    // public function __construct($titulo, $comentario, $identrada)
-    // {
-    //     $this->titulo = $titulo;
-    //     $this->comentario = $comentario;
-    //     $this->identrada = $identrada;
-    // }
-
-
-    public function insertComentario($data)
+    public function __construct($titulo, $comentario)
     {
-        try {
-            $stmtInsert = $this->conn->prepare("INSERT INTO comentarios VALUES(?,?)");
-            $stmtInsert->bindParam(1, $titulo, PDO::PARAM_STR);
-            $stmtInsert->bindParam(2, $comentario, PDO::PARAM_STR);
+        $this->titulo = $titulo;
+        $this->comentario = $comentario;
+        
+    }
 
-            $titulo = $data["titulo"];
-            $comentario = $data["comentario"];
 
-            $stmtInsert->execute();
-            return $stmtInsert->rowCount();
+    
+    
 
-        } catch (Exception | PDOException $e) {
-            echo 'Falló la inserción: ' . $e->getMessage();
-        }
+    /**
+     * Get the value of titulo
+     */ 
+    public function getTitulo()
+    {
+        return $this->titulo;
+    }
+
+    /**
+     * Set the value of titulo
+     *
+     * @return  self
+     */ 
+    public function setTitulo($titulo)
+    {
+        $this->titulo = $titulo;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of comentario
+     */ 
+    public function getComentario()
+    {
+        return $this->comentario;
+    }
+
+    /**
+     * Set the value of comentario
+     *
+     * @return  self
+     */ 
+    public function setComentario($comentario)
+    {
+        $this->comentario = $comentario;
+
+        return $this;
     }
 }

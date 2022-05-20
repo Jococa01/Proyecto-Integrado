@@ -9,6 +9,7 @@
   <link rel="shortcut icon" href="../portal/Assets/imgs/favicon.ico">
   <title>Mitología Romana</title>
   <script src="../portal/Assets/Javascript/comentaris.js"></script>
+  <script src="../portal/Assets/Javascript/divu.js"></script>
 </head>
 
 <body>
@@ -113,19 +114,19 @@
   <aside>
 
     <img src="../portal/Assets/imgs/mitologia-romana.jpg" alt="">
-    <a href="favorite-1.jpg"><img src="favorite-1_th.jpg" alt=""></a>
+    
   </aside>
   <footer>
     <section>
       <h2>COMENTARIOS</h2>
       <br>
-     
+
       <form class="form" id="formulario">
         <input id="titulo" class="text-input" name="titulo" placeholder="TÍTULO" required type="text"></input>
         <br>
         <p class="field">
-          <textarea id="comentario" class="textarea" cols="50" rows="4" name="comentario" placeholder="ESCRIBE AQUÍ TU COMENTARIO" required
-            type="text"></textarea>
+          <textarea id="comentario" class="textarea" cols="50" rows="4" name="comentario"
+            placeholder="ESCRIBE AQUÍ TU COMENTARIO" required type="text"></textarea>
         </p>
         <p class="field">
           <input class="button" type="submit" value="ENVIAR COMENTARIO"></input>
@@ -133,19 +134,37 @@
       </form>
     </section>
 
-    <table style="background-color: red; height: 300px; width: 100%;">
-      <thead>
-        <tr>
-          <th>COMENTARIOS</th>
-        </tr>
-      </thead>
-      <tbody id="rows">
-        <!-- <tr>
-          <td>Hola</td>
-        </tr> -->
-      </tbody>
+    <section>
+      <div class="columns">
+        <!--  -->
+        <div class="column is-6 ">
+          <div class="card events-card">
+            <header class="card-header">
+              <p class="card-header-title">
+                comentarios
+              </p>
+              <a href="#" class="card-header-icon" aria-label="more options">
+                <span class="icon">
+                  <i class="fa fa-angle-down" aria-hidden="true"></i>
+                </span>
+              </a>
+            </header>
+            <div class="card-table">
+              <div class="content">
+                <table class="table is-fullwidth is-striped">
+                  <tbody id="rows">
 
-    </table>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <footer class="card-footer">
+              <a href="#" class="card-footer-item">View All</a>
+            </footer>
+          </div>
+        </div>
+      </div>
+    </section>
   </footer>
 
 </body>
