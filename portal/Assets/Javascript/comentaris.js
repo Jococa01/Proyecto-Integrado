@@ -15,10 +15,9 @@ function main() {
     formulario.addEventListener("submit", function (e) {
         e.preventDefault();
         loadData(this);
-        draw(this)
     });
-    
-    
+    draw();
+
 }
 
 
@@ -28,8 +27,8 @@ function loadData(form) {
     xhttp.addEventListener("readystatechange", function () {
         if (this.readyState == 4 && this.status == 200) {
             let data = JSON.parse(this.responseText);
-            /* console.log(data); */
-            // drawList(data);
+            daw()
+
         }
     });
     xhttp.open("POST", "/portal/Assets/php/hola.php", true);
@@ -44,7 +43,7 @@ function loadData(form) {
 //     for (let index = 0; index < data.length; index++) {
 //         rows.innerHTML+="<tr><td>"+data["titulo"]+"</td></tr>";
 //     }
-        
+
 // }
 
 
@@ -54,12 +53,13 @@ function draw() {
     xhttp.addEventListener("readystatechange", function () {
         if (this.readyState == 4 && this.status == 200) {
             let data = JSON.parse(this.responseText);
-            
-            for(let i=0; i < data[0].length;i++){
-                document.getElementById('rows').innerHTML+='<tr><td><div style="vertical-align: middle;"><h5>'+data[0][i][0]+'</h5></div></td><td><div style="vertical-align: middle;"><h5>'+data[0][i][1]+'</h5></div></td></tr>'
+
+            for (let i = 0; i < data[0].length; i++) {
+                document.getElementById('rows').innerHTML += 
+                '<tr><td><div class="card"><div class="card-image"></div><div class="card-content"><div class="media"><div class="media-left"><figure class="image is-48x48"><img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image"></figure></div><div class="media-content"><p class="title is-4">'+ data[0][i][0] +'</p></div></div> <div class="content">'+ data[0][i][1] +'</div></div></div></td></tr>'
             }
         }
-        });
+    });
     xhttp.open("POST", "/portal/Assets/php/com.php", false);
     xhttp.send();
 }
