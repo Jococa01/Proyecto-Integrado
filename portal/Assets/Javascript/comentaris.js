@@ -27,7 +27,7 @@ function loadData(form) {
     xhttp.addEventListener("readystatechange", function () {
         if (this.readyState == 4 && this.status == 200) {
             let data = JSON.parse(this.responseText);
-            daw()
+            
 
         }
     });
@@ -60,7 +60,7 @@ function draw() {
             }
         }
     });
-    xhttp.open("POST", "/portal/Assets/php/com.php", false);
+    xhttp.open("POST", "/portal/Assets/php/com.php", true);
     xhttp.send();
 }
 
