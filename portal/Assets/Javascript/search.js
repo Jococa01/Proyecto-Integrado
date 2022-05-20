@@ -2,8 +2,8 @@ document.addEventListener('DOMContentLoaded',main);
 
 function main() {
     let searchbar =  document.getElementById('busqueda');
+    let searchlist = document.getElementById('searchlist');
     searchbar.addEventListener("input",function(){
-        let searchlist = document.getElementById('searchlist');
         searchlist.innerHTML="";
         if(searchbar.value.length>1){
             loadData(searchbar.value);
@@ -21,10 +21,10 @@ function loadData(searchval) {
                 let data = JSON.parse(this.responseText);
                 // console.log(data);
                 if(data.length<1){
-                    searchlist.innerHTML+="<li>No hay resultados</li>";
+                    searchlist.innerHTML="<li>No hay resultados</li>";
                 }else{
                     for(let i=0;i<data.length;i++){
-                        searchlist.innerHTML+="<li>"+"<a href='"+data[i][3]+".html'>"+data[i][3]+"</a></li>";
+                        searchlist.innerHTML+="<li>"+"<a href='/portal/Assets/php/load.php?page="+data[i][0]+"'>"+data[i][3]+"</a></li>";
                     }
                 }
             }

@@ -4,6 +4,7 @@ class entradas extends connection{
 
 
     protected $Entradas=[];
+    protected $BusquedaEntradas=[];
 
 
     public function newEntry($data){
@@ -39,6 +40,26 @@ class entradas extends connection{
             $sqlAll = "SELECT codigoPagina,nombreEditor,fecha,titulo,contenido FROM entrada where titulo like ".'\''.$localsearch.'\'';
             $rowsAll = $this->conn->query($sqlAll);
             while ($Entrada = $rowsAll->fetch(PDO::FETCH_ASSOC)) {
+                array_push($this->BusquedaEntradas, new entrada(
+                    $Entrada["codigoPagina"],
+                    $Entrada["nombreEditor"],
+                    $Entrada["fecha"],
+                    $Entrada["titulo"],
+                    $Entrada["contenido"]
+                ));
+            }
+            $this->BusquedaEntradas;
+        } catch (Exception | PDOException $e){
+            echo 'Falló la búsqueda'.$e->getMessage();
+        }
+
+    }
+
+    public function entryList(){
+        try{
+            $sqlAll = "SELECT codigoPagina,nombreEditor,fecha,titulo,contenido FROM entrada";
+            $rowsAll = $this->conn->query($sqlAll);
+            while ($Entrada = $rowsAll->fetch(PDO::FETCH_ASSOC)) {
                 array_push($this->Entradas, new entrada(
                     $Entrada["codigoPagina"],
                     $Entrada["nombreEditor"],
@@ -51,13 +72,20 @@ class entradas extends connection{
         } catch (Exception | PDOException $e){
             echo 'Falló la búsqueda'.$e->getMessage();
         }
+    }
 
+    public function drawEntries(){
+        $array=[];
+        for($n=0;$n<count($this->Entradas);$n++){
+            $array[$n]=[$this->Entradas[$n]->getCodigoPagina(),$this->Entradas[$n]->getNombreEditor(),$this->Entradas[$n]->getFecha(),$this->Entradas[$n]->getTitulo(),$this->Entradas[$n]->getContenido()];
+        }
+        return $array;
     }
 
     public function loadSearch(){
         $array=[];
-        for($n=0;$n<count($this->Entradas);$n++){
-            $array[$n]=[$this->Entradas[$n]->getCodigoPagina(),$this->Entradas[$n]->getNombreEditor(),$this->Entradas[$n]->getFecha(),$this->Entradas[$n]->getTitulo(),$this->Entradas[$n]->getContenido()];
+        for($n=0;$n<count($this->BusquedaEntradas);$n++){
+            $array[$n]=[$this->BusquedaEntradas[$n]->getCodigoPagina(),$this->BusquedaEntradas[$n]->getNombreEditor(),$this->BusquedaEntradas[$n]->getFecha(),$this->BusquedaEntradas[$n]->getTitulo(),$this->BusquedaEntradas[$n]->getContenido()];
         }
         return $array;
     }
@@ -66,7 +94,7 @@ class entradas extends connection{
     public function getEntry($id){
 
         try{
-            $stmtEntry = $this->conn->prepare("SELECT contenido FROM entrada WHERE codigoPag = :codigoPag");
+            $stmtEntry = $this->conn->prepare("SELECT codigoPagina,nombreEditor,fecha,titulo,contenido FROM entrada WHERE codigoPagina = :codigoPag");
             $stmtEntry->bindParam(':codigoPag', $id, PDO::PARAM_STR);
             if ($stmtEntry->execute() && $stmtEntry->rowCount() > 0) {
                 return $stmtEntry->fetch(PDO::FETCH_ASSOC);

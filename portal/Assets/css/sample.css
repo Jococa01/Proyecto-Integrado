@@ -29,3 +29,11 @@ h2{
     font-family: 'Times New Roman', Times, serif;
     text-align: center;
 }
+
+#usertable>*::-webkit-scrollbar{
+    display: none;
+}
+.usertable>*{
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}

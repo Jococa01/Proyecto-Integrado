@@ -4,11 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1.0, user-scalable=no">
     <title>sistema de admin</title>
     <link rel="stylesheet" href="portal/Assets/css/sample.css">
     <link rel="stylesheet" href="./portal/Assets/css/loadingscreen.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <link rel="shortcut icon" href="./portal/Assets/imgs/favicon.ico">
     <script src="./portal/Assets/Javascript/cp.js"></script>
     <script src="./portal/Assets/Javascript/sessioncheck.js"></script>
 
@@ -59,19 +60,19 @@
           </div>
         </div>
       </nav>
-    <section class="hero is-info welcome is-small">
+    <section class="hero is-info welcome is-small" style="margin-top:5%; margin-right: 10%; margin-left: 10%;">
         <div class="hero-body">
             <div class="container">
                 <h1 class="title">
-                    Hola, Administrador.
+                    PANEL DE CONTROL
                 </h1>
                 <h2 class="subtitle">
-                    Es bueno tener nuevas de usted
+                    Bienvenido al panel de control.
                 </h2>
             </div>
         </div>
     </section>
-    <section class="info-tiles">
+    <section class="info-tiles" style="margin-top: 1%; margin-right: 10%; margin-left: 10%;">
         <div class="tile is-ancestor has-text-centered">
             <div class="tile is-parent">
                 <article class="tile is-child box">
@@ -88,7 +89,7 @@
             </div>
         </div>
     </section>
-    <section>
+    <section style="margin-right: 10%; margin-left: 10%;">
         <div class="columns">
             <div class="column is-6 ">
                 <div class="card events-card">
@@ -104,7 +105,7 @@
                     </header>
                     <div class="card-table">
                         <div class="content">
-                            <table class="table is-fullwidth is-striped">
+                            <table class="table is-striped">
                                 <tbody id="usertable">
                                 </tbody>
                             </table>
@@ -131,14 +132,7 @@
                     <div class="card-table">
                         <div class="content">
                             <table class="table is-fullwidth is-striped">
-                                <tbody>
-                                    <tr>
-                                        <td width="5%"><i class="fa fa-bell -o"></i></td>
-                                        <td>Lorum ipsum dolem aire</td>
-                                        <td class="level-right"><a class="button is-small is-primary"
-                                                href="#">Action</a>
-                                        </td>
-                                    </tr>
+                                <tbody id="entrytable">
                                 </tbody>
                             </table>
                         </div>

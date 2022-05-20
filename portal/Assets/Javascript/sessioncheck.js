@@ -36,7 +36,7 @@ function main(){
             });
         }
     });
-    xhttp.open("POST","/portal/Assets/php/sessioncheck.php",false);
+    xhttp.open("POST","/portal/Assets/php/sessioncheck.php",true);
     xhttp.send();
 }
 
