@@ -1,14 +1,21 @@
 @import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
 
-h1{
+h1 {
   font-size: 50px;
   font-weight: bold;
   text-align: center;
 }
-h3{
+
+h3 {
   font-size: 25px;
   font-weight: bold;
   text-align: center;
+}
+ul{
+  list-style-type: circle;
+  margin: 10px;
+  padding-left: 30px;
+  overflow: hidden;
 }
 
 button {
@@ -17,16 +24,16 @@ button {
   color: #00c8ff8d;
   font-weight: bold;
   line-height: normal;
-  border-radius: 5px; 
+  border-radius: 5px;
   height: 32px;
   text-align: center;
-  letter-spacing: 0.14286em; 
+  letter-spacing: 0.14286em;
   padding-bottom: 5%;
   cursor: pointer;
   transition: all 0.5s;
 }
 
-button{
+button {
   cursor: pointer;
   display: inline-block;
   position: relative;
@@ -35,9 +42,9 @@ button{
 
 button:hover {
   background-color: #000000;
-  color: white; 
+  color: white;
   padding-right: 24px;
-  padding-left:8px;
+  padding-left: 8px;
 }
 
 button:after {
@@ -59,13 +66,71 @@ input {
   height: 30px
 }
 
-div#contenedor{
-  position: absolute;
+div#contenedor {
+  position: relative;
   background-color: #00c8ff8d;
   color: white;
   height: 100%;
   width: 100%;
   padding-top: 10%;
+}
+
+div#sobreNosotros {
+  position: relative;
+  color: white;
+  height: 100%;
+  width: 100%;
+  padding-top: 20%;
+}
+
+div#sobreNosotros p{
+  font-size: 17px;
+  text-align: left;
+  margin-right: 10%;
+  margin-left: 15%;
+}
+
+div#sobreNosotros h1{
+  text-align: left;
+  margin-right: 10%;
+  margin-left: 10%;
+}
+
+div#sobreNosotros h3{
+  text-align: left;
+  margin-right: 10%;
+  margin-left: 10%;
+}
+
+#imgsec {
+  float: left;
+  margin-left: 150px;
+  margin-top: 80px;
+  width: 400px;
+}
+
+div#contactanos {
+  position: relative;
+  color: white;
+  height: 100%;
+  width: 100%;
+  padding-top: 15%;
+  padding-bottom: 10%;
+}
+
+div#contactanos h3 {
+  margin-right: 10%;
+  margin-left: 50%;
+}
+
+div#contactanos p {
+  margin-right: 10%;
+  margin-left: 50%;
+}
+
+div#contactanos ul {
+  margin-right: 10%;
+  margin-left: 50%;
 }
 
 form {
@@ -78,7 +143,21 @@ form {
   margin-top: 5%;
 }
 
-#busqueda{
+#busqueda {
   width: 60%;
   margin-right: 20px;
+}
+
+#imgprinc {
+  float: right;
+  margin-right: 150px;
+}
+
+footer {
+  position: absolute;
+  text-align: center;
+  background-color: #000000;
+  color: white;
+  width: 100%;
+  padding: 1%;
 }
