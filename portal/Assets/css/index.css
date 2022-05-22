@@ -61,8 +61,7 @@ input {
 
 div#contenedor{
   position: absolute;
-  /* background-color: #a0eafe8d; */
-  background-image: linear-gradient(#c3f2ff8d, #82e4ff8d);
+  background-color: rgb(221, 238, 252);
   color: white;
   height: 100%;
   width: 100%;
