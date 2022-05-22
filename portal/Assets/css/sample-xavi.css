@@ -10,6 +10,7 @@ h1{
     color: #2a2a2a;
     font-size: 30px;
     text-align: center;
+    margin-top: 5%;
   }
 
   h2{
@@ -51,7 +52,7 @@ aside img{
       width: 90%;
       height: 100%;
       margin-bottom: 30px;
-  }
+}
   .form .text-input, .form .textarea, .form .button {
     outline: none;
     line-height: normal;

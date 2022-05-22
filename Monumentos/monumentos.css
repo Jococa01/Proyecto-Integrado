@@ -39,7 +39,7 @@ aside {
 
 main {
     width: auto;
-    margin-left: 3%;
+    margin-left: 7%;
 }
 
 main>section>img {
@@ -50,7 +50,7 @@ aside {
     margin-right: 10%;
     width: auto;
     position: absolute;
-    padding-top: 3%;
+    padding-top: 6%;
 }
 
 aside img {

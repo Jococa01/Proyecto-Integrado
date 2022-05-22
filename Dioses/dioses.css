@@ -16,6 +16,7 @@ h1 {
     color: #2a2a2a;
     font-size: 30px;
     text-align: center;
+    margin-top: 4%;
 }
 
 h2 {
@@ -39,7 +40,7 @@ aside {
 
 main {
     width: auto;
-    margin-left: 3%;
+    margin-left: 10%;
 }
 
 main>section>img {
