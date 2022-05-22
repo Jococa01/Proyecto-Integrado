@@ -30,9 +30,23 @@ function loadData(form) {
             if (data == null) {
                 console.log("Se ha creado el usuario");
                 document.getElementById("mail").style.borderColor = "";
+
+                // Creación de un dialog con jquery
+                let div = document.createElement('div');
+                div.id='dialog';
+                let dialogtext = document.createElement('p');
+                dialogtext.innerHTML="Se ha creado la cuenta correctamente";
+                dialogtext.style.color="green";
+                div.appendChild(dialogtext);
+                document.body.appendChild(div);
+
+                // Función de JQuery
+                $("#dialog" ).dialog();
+
                 setTimeout(function(){
                     window.location.href='./index.html';
                 }, 2000);
+                
             }
             else {
                 console.log("Ya hay un usuario con esa cuenta de correo");
