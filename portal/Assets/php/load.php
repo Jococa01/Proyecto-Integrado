@@ -1,5 +1,5 @@
 <?php
-// Script de Joan
+// Script de Joan -- (Todas las entradas de la wiki, y más que no se han podido subir a tiempo han sido hechas por Xavi)
 //Utilizo el script de autoload para acceder a la carpeta donde tengo las clases almacenadas
 require_once('autoload.php');
 
@@ -21,9 +21,9 @@ $contenido = $entradas->getEntry($id)['contenido'];
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/sample-xavi.css">
     <link rel="shortcut icon" href="../imgs/favicon.ico">
-    <script src="../Javascript/comentaris.js"></script>
+    <!-- <script src="../Javascript/comentaris.js"></script> -->
     <script src="../Javascript/sessioncheck.js"></script>
-    <script src="../Javascript/dynamicload.js"></script>
+    <!-- <script src="../Javascript/dynamicload.js"></script> -->
     <title><?= $titulo ?></title>
 </head>
 
