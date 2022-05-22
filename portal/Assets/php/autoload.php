@@ -1,5 +1,5 @@
 <?php
-
+// Script de Joan
 function autoloading($className){
     $file = "clases/".$className.".php";
     if(file_exists($file)){

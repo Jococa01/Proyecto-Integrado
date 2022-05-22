@@ -1,5 +1,5 @@
 <?php
-
+// Script de Joan
 class sesionUsuario extends usuarios
 {
 

@@ -1,3 +1,6 @@
+
+// Script realizado por Joan
+
 document.addEventListener('DOMContentLoaded',main);
 
 function main(){
@@ -13,7 +16,7 @@ function main(){
                 document.getElementById('endbuttons').innerHTML='<div class="navbar-item has-dropdown is-hoverable"><a class="navbar-link">'+data['user']+'</a><div class="navbar-dropdown"><a class="navbar-item" id="close">Cerrar Sesión</a></div></div>';
 
                 if(data['level']=="administrador"){
-                    document.getElementById('endbuttons').innerHTML='<div class="navbar-item has-dropdown is-hoverable"><a class="navbar-link">'+data['user']+'</a><div class="navbar-dropdown"><a class="navbar-item">Perfil</a><a href="./sisadmin.html" class="navbar-item">Panel de control</a><a class="navbar-item" id="close">Cerrar Sesión</a></div></div>';
+                    document.getElementById('endbuttons').innerHTML='<div class="navbar-item has-dropdown is-hoverable"><a class="navbar-link">'+data['user']+'</a><div class="navbar-dropdown"><a href="./sisadmin.html" class="navbar-item">Panel de control</a><a class="navbar-item" id="close">Cerrar Sesión</a></div></div>';
                 }else if(data['level']!="administrador"){
                     redirect("index");
                 }

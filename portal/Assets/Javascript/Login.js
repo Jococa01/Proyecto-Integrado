@@ -1,19 +1,12 @@
+
+// Script realizado por Joan
+
 document.addEventListener("DOMContentLoaded", main);
 
 function main() {
     let formulario = document.getElementById("loginform");
     let password = document.getElementById("password");
-    let namefield = document.getElementById("name");
-
-    namefield.addEventListener('focusout',function(){
-        if(namefield.value!=""){
-            namefield.style.backgroundColor ='#ff9136';
-        }
-        else{
-            namefield.style.backgroundColor ='#fff';
-        }
-    })
-
+    // let namefield = document.getElementById("name");
     password.addEventListener('focusout',function(){
         if(password.value == ""){
             // console.log("no hay pass");
@@ -48,21 +41,27 @@ function loadData(form) {
 
 function CheckPassword(data){
     let password = document.getElementById("password");
+    var label = document.getElementById("passmessage");
     if(data['contrasenya']==md5(password.value)){
-        console.log("Pass correcta, se introdujo: "+md5(password.value)+" y la contraseña era: "+data['contrasenya']);
+        // console.log("Pass correcta, se introdujo: "+md5(password.value)+" y la contraseña era: "+data['contrasenya']);
+        label.innerHTML="";
         StartSession(data);
         window.location.href="./index.html";
     }else{
-        console.log("Pass incorrecta, se introdujo: "+md5(password.value)+" y la contraseña era: "+data['contrasenya']);
+        // console.log("Pass incorrecta, se introdujo: "+md5(password.value)+" y la contraseña era: "+data['contrasenya']);
+        label.innerHTML="La contraseña no es correcta";
     }
 }
 
 function Checkaccount(data){
+    var label = document.getElementById("mailmessage");
     if(data != null){
+        label.innerHTML="";
         CheckPassword(data);
     }
     else{
-        console.log("El correo no está registrado");
+        // console.log("El correo no está registrado");
+        label.innerHTML="El correo no está registrado";
     }
 }
 

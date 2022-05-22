@@ -1,3 +1,6 @@
+
+// Script realizado por Joan
+
 document.addEventListener('DOMContentLoaded',main);
 
 function main() {

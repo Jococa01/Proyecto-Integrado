@@ -1,3 +1,6 @@
+
+// Script realizado por Joan
+
 document.addEventListener("DOMContentLoaded", main);
 document.addEventListener('keydown',function(e){
     if(e.key === "Escape"){

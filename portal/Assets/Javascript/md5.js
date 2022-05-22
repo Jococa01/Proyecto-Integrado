@@ -1,3 +1,5 @@
+// Script basado en la función nativa de php md5
+
 function md5cycle(x, k) {
 var a = x[0], b = x[1], c = x[2], d = x[3];
 

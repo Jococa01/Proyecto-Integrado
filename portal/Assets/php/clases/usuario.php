@@ -1,5 +1,5 @@
 <?php
-
+// Script de Joan
 class usuario{
 
 protected $Email;
