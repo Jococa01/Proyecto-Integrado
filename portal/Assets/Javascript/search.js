@@ -26,11 +26,10 @@ function loadData(searchval) {
                 if(data.length<1){
                     searchlist.innerHTML="<li>No hay resultados</li>";
                 }else{
-                    setTimeout(function(){
-                        for(let i=0;i<data.length;i++){
-                            searchlist.innerHTML+="<li>"+"<a href='/portal/Assets/php/load.php?page="+data[i][0]+"'>"+data[i][3]+"</a></li>";
-                        }
-                    }, 1);
+                    searchlist.innerHTML="";
+                    for(let i=0;i<data.length;i++){
+                        searchlist.innerHTML+="<li>"+"<a href='/portal/Assets/php/load.php?page="+data[i][0]+"'>"+data[i][3]+"</a></li>";
+                    }
                 }
             }
         });
